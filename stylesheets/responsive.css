@@ -1,0 +1,121 @@
+
+@import url(../../../stylesheets/responsive.css);
+
+@media screen and (max-width: 899px) {
+
+  #header {
+    background-image: none;
+  }
+
+  #content > .contextual {
+    background: white url(../images/logo-responsive.png) no-repeat 10px;
+    background-position: right top;
+    background-size: contain;
+  }
+
+  #project-jump.drdn {
+    background-color: rgb(86, 199, 165);
+    color: #ffffff;
+  }
+
+  #project-jump .drdn-trigger {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    color: #ffffff;
+    padding-left: 24px;
+    background: transparent;
+    height: 50px;
+    line-height: 40px;
+    border: 0;
+  }
+
+  .flyout-menu {
+    position: absolute;
+    right: -250px;
+    display: block;
+    overflow-x: hidden;
+    width: 250px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: #014651;
+    background-color: #d6faa9;
+  }
+
+  .flyout-menu ul li a {
+    line-height: 40px;
+    display: block;
+    overflow: hidden;
+    height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-top: 2px dashed#8cc48838;
+  }
+
+  .flyout-menu a {
+    color: #643503;
+    font-size: 16px;
+  }
+
+  .flyout-menu ul li a:hover {
+    background-color: rgb(255, 255, 185);
+    color: #4CAF50;
+  }
+
+  .flyout-menu ul li a::before {
+    position: relative;
+    left: 5px;
+    top: 0px;
+    content: "";
+    font-size: 0.8em;
+
+    padding: 0 0.6em 0 0.2em;
+    background: #4CAF50;
+    color:#fff;
+    height: 1em;
+    width: 0.6em;
+    text-align: center;
+    border-radius: 80% 3%;
+    margin-right: 10px;
+  }
+
+  .flyout-menu h3 {
+    font-size: 20px;
+    line-height: 22px;
+    height: 26px;
+    margin: 0;
+    padding-left: 4px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: white;
+    background-color: #037107;
+  }
+
+  .flyout-menu h3::before {
+    position: relative;
+    left: 5px;
+    top: 0px;
+    content: "";
+    font-size: 0.8em;
+
+    padding: 0 0.6em 0 0.2em;
+    background: rgb(250, 227, 113);
+    color:#fff;
+    height: 1em;
+    width: 0.6em;
+    text-align: center;
+    border-radius: 2% 80%;
+    margin-right: 10px;
+  }
+
+  .mobile-toggle-button {
+      border-left: 2px dotted #fcf9f9;
+  }
+
+  .mobile-toggle-button:after {
+    color: #ffffff;
+  }
+}
+
