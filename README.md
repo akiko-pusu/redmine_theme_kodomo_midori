@@ -74,13 +74,18 @@ Please edit stylesheets/application.cs, stylesheets/responsive.css and javascrip
 #### 配布サイト
 
 - あんずいろapricot×color
-- 配布サイトURL: <http://www8.plala.or.jp/p_dolce/index.html>
-- 作成者：京風子（Kyoko）さま
+ - 配布サイトURL: <http://www8.plala.or.jp/p_dolce/index.html>
+ - 作成者：京風子（Kyoko）さま
+- Google fomts - Patrick Hand
+ - Designer: Patrick Wagesreiter
 
 #### 利用フォント
 
 - あんずもじ
 - あんずもじ等幅
+- Google fomts - Patrick Hand
+  - <https://fonts.google.com/specimen/Patrick+Hand>
+  - License: SIL Open Font License (OFL)
 
 ### 配置方法
 

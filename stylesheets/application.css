@@ -12,25 +12,35 @@
   src: url("../font/APJapanesefontT.ttf") format("truetype")
 }
 
+@font-face {
+  font-family: 'Patrick Hand';
+  src: url("../font/PatrickHand-Regular.ttf") format("truetype")
+}
+
 body {
-  font-family: anzu, Verdana, sans-serif;
+  font-family: 'Patrick Hand', anzu, Verdana, sans-serif;
   font-size: 20px;
   color: rgb(1, 55, 36);
 }
 
 h1, h2, h3, h4 {
-  font-family: anzu;
+  font-family: 'Patrick Hand', anzu;
   padding: 2px 10px 1px 0px;
   margin: 0 0 10px 0;
 }
 
 pre, code {
-  font-family: anzuT, Consolas, Menlo, "Liberation Mono", Courier, monospace;
+  font-family: anzuT, 'Patrick Hand', Consolas, Menlo, "Liberation Mono", Courier, monospace;
 }
 
 a, a:link, a:visited {
   color: rgb(6, 82, 45);
   text-decoration: none;
+}
+
+#project-jump .drdn-trigger {
+  font-size: 10pt;
+  height: 24px;
 }
 
 #header {
@@ -171,9 +181,9 @@ div.box p label::before {
 	height: 0.8em;
 	width: 0.4em;
 	text-align: center;
-	border-radius: 80% 1%;
+  border-radius: 80% 1%;
+  margin-right: 4px;
 }
-
 
 #content {
   font-size: 18px;
@@ -188,7 +198,6 @@ div.box p label::before {
   border-bottom: 1px solid #bbbbbb;
   color: #8a3737;
 }
-
 
 .nodata, .warning {
   text-align: center;
@@ -213,6 +222,11 @@ div.box p label::before {
   color: #c99696;
 }
 
+#admin-menu a.selected {
+  background-color: transparent;
+  color: #820505;
+}
+
 #main-menu li {
   margin: 0px 4px 0px 0px;
 }
@@ -232,7 +246,7 @@ div.box p label::before {
 #main-menu li a::before {
 	position: absolute;
   left: 5px;
-  top: 6px;
+  top: 8px;
   content: "";
   font-size: 0.8em;
 
@@ -563,7 +577,7 @@ div.filedroplistner fieldset {
   padding: 5px 0;
   right: -80px;
   bottom: 50px;
-  width: 310px;
+  width: 300px;
   font-size: 20pt;
   text-align: center;
   background: rgba(57, 195, 212, 0.5);
@@ -575,7 +589,6 @@ div.filedroplistner fieldset {
   border-top: dashed 2px rgba(255, 255, 255, 0.65);
   border-bottom: dashed 2px rgba(255, 255, 255, 0.65);
 }
-
 
 a.journal-link {
   display: inline-block;

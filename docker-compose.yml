@@ -15,10 +15,12 @@ services:
            bundle exec rake db:migrate &&
            bundle exec rake redmine:plugins:migrate &&
            bundle exec rake generate_secret_token &&
+           bundle exec rails runner public/themes/redmine_theme_kodomo_midori/miscs/sample.rb
            bundle exec rails s -p 3000 -b '0.0.0.0'"
     environment:
       RAILS_ENV: development
     volumes:
       - .:/app/redmine/public/themes/redmine_theme_kodomo_midori
+      - ./.data:/app/data
     ports:
       - "3000:3000"

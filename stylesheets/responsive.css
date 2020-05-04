@@ -71,11 +71,11 @@
     content: "";
     font-size: 0.8em;
 
-    padding: 0 0.6em 0 0.2em;
+    padding: 0 0.8em 0 0.2em;
     background: #4CAF50;
     color:#fff;
     height: 1em;
-    width: 0.6em;
+    width: 0.8em;
     text-align: center;
     border-radius: 80% 3%;
     margin-right: 10px;
@@ -100,11 +100,11 @@
     content: "";
     font-size: 0.8em;
 
-    padding: 0 0.6em 0 0.2em;
+    padding: 0 0.8em 0 0.2em;
     background: rgb(250, 227, 113);
     color:#fff;
     height: 1em;
-    width: 0.6em;
+    width: 0.8em;
     text-align: center;
     border-radius: 2% 80%;
     margin-right: 10px;
