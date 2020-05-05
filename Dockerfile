@@ -24,6 +24,10 @@ RUN apt-get install -qq -y --no-install-recommends \
 RUN cd /app && svn co http://svn.redmine.org/redmine/branches/4.0-stable/ redmine
 WORKDIR /app/redmine
 
+# install redmine_theme_kodomo_midori theme
+RUN git clone https://github.com/akiko-pusu/redmine_theme_kodomo_midori.git public/themes/redmine_theme_kodomo_midori
+WORKDIR /app/redmine
+
 # add database.yml (for development, development with mysql, test)
 RUN echo $'test:\n\
   adapter: sqlite3\n\
