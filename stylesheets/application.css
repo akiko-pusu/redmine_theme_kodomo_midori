@@ -641,4 +641,15 @@ a.journal-link:after {
   padding: 5px;
   text-align: center;
   background: #76ccc0;
+  background-image :
+      repeating-linear-gradient(44deg,
+                                rgba(153, 255, 204, 0.41),
+                                rgba(153, 255, 204, 0.41) 22px,
+                                rgba(0, 0, 0, 0) 0,
+                                rgba(0, 0, 0, 0) 44px),
+      repeating-linear-gradient(134deg,
+                                rgba(0, 179, 179, 0.50),
+                                rgba(0, 179, 179, 0.50) 22px,
+                                rgba(0, 0, 0, 0) 0,
+                                rgba(0, 0, 0, 0) 44px);
 }
