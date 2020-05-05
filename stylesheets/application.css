@@ -484,17 +484,17 @@ a.icon:hover {
 
 
 /*----- form --------*/
-input[type='text'] {
+input[type='text'], input[type='password'] {
   padding: 5px;
   border-radius: 5px;
   border: 1px solid #ccc;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  margin-right: 6px;
 }
 
 textarea {
-  width: 100%;
   height: 300px;
   padding: 5px;
   border-radius: 5px;
@@ -504,7 +504,11 @@ textarea {
   -moz-appearance: none;
 }
 
-input[name='commit'] {
+.tabular.settings textarea, .tabular.settings .wiki-preview, .tabular.settings .jstTabs {
+  width: 90%;
+}
+
+input[name='commit'], input[type='submit'] {
   font-family: anzu;
   font-size: 12pt;
   display: inline-block;
@@ -515,11 +519,10 @@ input[name='commit'] {
   box-shadow: 0px 0px 0px 5px #009d73;
   border: dashed 2px #FFF;
   margin-right: 8px;
-  width: 80px;
-  max-width: 100px;
+  min-width: 100px;
 }
 
-input[type='submit']:hover {
+input[name='commit']:hover, input[type='submit']:hover {
   background: #76d7bd;
   box-shadow: 0px 0px 0px 5px #76d7bd;
 }
@@ -535,20 +538,28 @@ input[name='continue'] {
   box-shadow: 0px 0px 0px 5px #a0e87d;
   border: dashed 2px #FFF;
   margin-right: 8px;
-  width: 80px;
-  max-width: 100px;
+  min-width: 100px;
 }
 
-input[type='submit']:hover {
-  background: #76d7bd;
-  box-shadow: 0px 0px 0px 5px #76d7bd;
+table.list td {
+  padding: 4px;
 }
 
 select {
-	margin-bottom: 20px;
 	padding: 7px 30px 7px 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  display: inline-block;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.5em;
+  margin-right: 6px;
+}
+
+select#lang, select.expandable {
+  vertical-align: text-top;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 div.filedroplistner fieldset {
