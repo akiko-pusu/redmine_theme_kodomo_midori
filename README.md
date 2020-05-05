@@ -11,6 +11,8 @@ If you are interested, try creating a theme for kids and different generations!
 <!-- TOC depthFrom:2 orderedList:false -->
 
 - [Screen shot](#screen-shot)
+  - [PC](#pc)
+  - [Responsive](#responsive)
 - [Installation](#installation)
 - [docker-compose](#docker-compose)
 - [Customize theme](#customize-theme)
@@ -31,8 +33,12 @@ If you are interested, try creating a theme for kids and different generations!
 
 ## Screen shot
 
-![Screen shot](images/screenshot-pc.png)
-![Screen shot: Mobile](images/screenshot-sp.png)
+### PC
+<img src='images/screenshot-pc.png' width='500' title='PC version'>
+
+### Responsive
+
+<img src='images/screenshot-sp.png' width='500' title='Mobile version'>
 
 ## Installation
 
@@ -142,4 +148,7 @@ docker run --rm -d -p 3000:3000/tcp redmine_theme_kodomo_midori_container:latest
 
 ## ChangeLog
 
+- 0.0.2
+  - Style update.
+  - Change to use **Patrick Hand** as default font.
 - First Release: 0.0.1
