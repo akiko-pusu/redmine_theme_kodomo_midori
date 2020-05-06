@@ -43,8 +43,9 @@ RUN gem update bundler
 RUN bundle config set without 'postgresql rmagick mysql'
 RUN bundle install
 RUN bundle exec rake db:migrate && bundle exec rake generate_secret_token
+RUN bundle exec rails runner public/themes/redmine_theme_kodomo_midori/miscs/sample.rb
 
 WORKDIR /app/redmine
 
 EXPOSE  3000
-CMD ["rails", "server", "-b", "0.0.0.0"]
+CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]

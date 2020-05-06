@@ -8,8 +8,8 @@ services:
   web:
     build:
       context: .
-    image: redmine_sqlite3
-    container_name: redmine_sqlite3
+    image: redmine_theme_kodomo_midori
+    container_name: redmine_theme_kodomo_midori
     command: >
       bash -c "bundle &&
            bundle exec rake db:migrate &&
