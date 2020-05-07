@@ -373,7 +373,7 @@ div[id^="change-"]:nth-of-type(odd) {
   margin-right: 30px;
 }
 
-h4.note-header::before {
+.avatars-off h4.note-header::before {
   content: "┥";
   font-size: 12pt;
   top: 6px;
