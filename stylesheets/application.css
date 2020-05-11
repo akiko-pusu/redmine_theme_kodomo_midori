@@ -39,10 +39,30 @@ code {
 
 pre,
 code {
-  background-image:
-    linear-gradient(transparent 11px, rgba(220, 220, 200, .8) 12px, transparent 12px),
-    linear-gradient(90deg, transparent 11px, rgba(220, 220, 200, .8) 12px, transparent 12px);
-  background-size: 100% 12px, 12px 100%;
+  background-image :
+  repeating-linear-gradient(to bottom,
+  transparent 22px,
+  rgba(153, 153, 153, 0.15) 23px,  rgba(153, 153, 153, 0.15) 23px,
+  transparent 24px,  transparent 45px,
+  rgba(153, 153, 153, 0.15) 46px,  rgba(153, 153, 153, 0.15) 46px,
+  transparent 47px,  transparent 68px,
+  rgba(153, 153, 153, 0.15) 69px,  rgba(153, 153, 153, 0.15) 69px,
+  transparent 70px,  transparent 91px,
+  rgba(153, 153, 153, 0.15) 92px,  rgba(153, 153, 153, 0.15) 92px,
+  transparent 93px,  transparent 114px,
+  rgba(153, 153, 153, 0) 115px,  rgba(153, 153, 153, 0) 115px),
+
+repeating-linear-gradient(to right,
+  transparent 22px,
+  rgba(153, 153, 153, 0.15) 23px,  rgba(153, 153, 153, 0.15) 23px,
+  transparent 24px,  transparent 45px,
+  rgba(153, 153, 153, 0.15) 46px,  rgba(153, 153, 153, 0.15) 46px,
+  transparent 47px,  transparent 68px,
+  rgba(153, 153, 153, 0.15) 69px,  rgba(153, 153, 153, 0.15) 69px,
+  transparent 70px,  transparent 91px,
+  rgba(153, 153, 153, 0.15) 92px,  rgba(153, 153, 153, 0.15) 92px,
+  transparent 93px,  transparent 114px,
+  rgba(153, 153, 153, 0) 115px,  rgba(153, 153, 153, 0) 115px);
 }
 
 .syntaxhl {
@@ -66,7 +86,7 @@ a:visited {
   background-position: 20px 20px;
   background-size: 60px;
   padding-left: 86px;
-  border-color: rgb(220, 203, 152);
+  border-color: rgb(206, 228, 197);
   color: #06320f;
   border-width: thin;
   border-style: solid;
@@ -844,3 +864,147 @@ a.journal-link:after {
       rgba(0, 0, 0, 0) 0,
       rgba(0, 0, 0, 0) 44px);
 }
+
+img.gravatar {
+  border-radius: 50%;
+  box-shadow: 1px 0px 2px #c9c7c2;
+  padding: 4px;
+  border-style: none;
+  margin: 2px;
+}
+
+
+div#activity dl {
+  border-left: 2px dotted rgb(184, 207, 206);
+  padding-left: 9px;
+  margin-bottom: 1px;
+  margin-top: 1px;
+}
+
+
+div#activity h3 {
+  background-color: #eefce6;
+}
+
+div#activity h3::before {
+  content: "";
+  background:white;
+  color: #fff;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+div#activity h3 {
+  position: relative;
+  color: white;
+  padding:0.2em 0.2em 0.2em 2em;
+  background-color: rgba(86, 199, 165, 0.62);
+  border-top-left-radius: 1.5em;
+  border-bottom-left-radius: 1.5em;
+}
+
+div#activity h3::after {
+  position: absolute;
+  top: 50%;
+  left:1em;
+  transform:translateY(-50%);
+  content: '';
+  width: 13px;
+  height:13px;
+  background-color: white;
+  border-radius:100%;
+}
+
+div#activity > dl > dt:hover {
+  color: darkorange;
+  text-decoration: darkorange;
+}
+
+div#activity > dl dd:hover {
+  border-bottom: 2px dashed rgb(186, 220, 210);
+}
+
+span.pagination {
+  text-align: center;
+}
+
+ul.pages li {
+  background: beige;
+  border-radius: 20%;
+  border-style: none;
+}
+
+ul.pages li.page {
+  border: none;
+  margin-left: 4px;
+}
+
+ul.pages li.page:first-child {
+  border-radius: 20%;
+}
+
+.pagination ul.pages li:last-child {
+  border-top-right-radius: 20%;
+  border-bottom-right-radius: 20%;
+}
+
+p.nodata {
+  outline: 2px dashed rgb(253, 219, 169);
+  outline-offset: -5px;
+}
+
+div.splitcontentleft > ul {
+  border-radius: 0px;
+  position: relative;
+  background: #f3f6e0;
+  box-shadow: 0px 0px 0px 5px f3f6e0;
+  border: dashed 2px rgba(163, 207, 139, 0.39);
+  padding: 0.2em 1em;
+  /* color: #454545; */
+  list-style-position: inside;
+}
+
+#login-form label {
+  position: relative;
+}
+
+#login-form label::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  -moz-border-radius: 7.5px;
+  -webkit-border-radius: 7.5px;
+  border-radius: 7.5px;
+  background-color: #66c977;
+  margin-right: 4px;
+}
+
+#login-form {
+  background-color: white;
+  border-bottom: 3px dotted #b5cdba;
+  padding: 28px;
+  position: relative;
+  z-index: 0;
+  border-radius: 0px;
+  border-top: 3px dotted #b5cdba;
+  border-left: none;
+  border-right: none;
+  padding-bottom: 40px;
+}
+
+#login-form:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -18px;
+  left: -22px;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  border-radius: 100%;
+  background: #def2cf;
+}
+
