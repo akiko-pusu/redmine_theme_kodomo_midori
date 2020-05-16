@@ -8,7 +8,6 @@ services:
   web:
     build:
       context: .
-    image: redmine_theme_kodomo_midori
     container_name: redmine_theme_kodomo_midori
     command: >
       bash -c "bundle &&
