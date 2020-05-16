@@ -721,7 +721,7 @@ input[type='submit'] {
   font-family: anzu;
   font-size: 12pt;
   display: inline-block;
-  padding: 0.5em 0.5em;
+  /* padding: 0.5em 0.5em; */
   background: #009d73;
   color: #FFF;
   border-radius: 2px;
@@ -756,7 +756,7 @@ table.list td {
 }
 
 select {
-  padding: 7px 30px 7px 10px;
+  /* padding: 7px 30px 7px 10px; */
   border-radius: 5px;
   border: 1px solid #ccc;
   display: inline-block;
@@ -1008,3 +1008,130 @@ div.splitcontentleft > ul {
   background: #def2cf;
 }
 
+/*------- Loading CSS ----------*/
+#bowlG {
+	position: relative;
+	width:90%;
+	height:90%;
+  margin:auto;
+}
+
+#bowl_ringG{
+  display: none;
+  position:absolute;
+  top: 35%;
+  left: 40%;
+	width:173px;
+	height:173px;
+	border:14px solid rgb(209,235,213);
+	border-radius:173px;
+		-o-border-radius:173px;
+		-ms-border-radius:173px;
+		-webkit-border-radius:173px;
+		-moz-border-radius:173px;
+}
+
+.ball_holderG{
+	position:absolute;
+	width:46px;
+	height:173px;
+	left:63px;
+	top:0px;
+	animation-name:ball_moveG;
+		-o-animation-name:ball_moveG;
+		-ms-animation-name:ball_moveG;
+		-webkit-animation-name:ball_moveG;
+		-moz-animation-name:ball_moveG;
+	animation-duration:1.69s;
+		-o-animation-duration:1.69s;
+		-ms-animation-duration:1.69s;
+		-webkit-animation-duration:1.69s;
+		-moz-animation-duration:1.69s;
+	animation-iteration-count:infinite;
+		-o-animation-iteration-count:infinite;
+		-ms-animation-iteration-count:infinite;
+		-webkit-animation-iteration-count:infinite;
+		-moz-animation-iteration-count:infinite;
+	animation-timing-function:linear;
+		-o-animation-timing-function:linear;
+		-ms-animation-timing-function:linear;
+		-webkit-animation-timing-function:linear;
+		-moz-animation-timing-function:linear;
+}
+
+.ballG{
+	position:absolute;
+	left:0px;
+	top:-40px;
+	width:69px;
+	height:69px;
+	background:rgba(161,240,186,0.97);
+	border-radius:58px;
+		-o-border-radius:58px;
+		-ms-border-radius:58px;
+		-webkit-border-radius:58px;
+		-moz-border-radius:58px;
+}
+
+@keyframes ball_moveG{
+	0%{
+		transform:rotate(0deg)
+	}
+
+	100%{
+		transform:rotate(360deg)
+	}
+}
+
+@-o-keyframes ball_moveG{
+	0%{
+		-o-transform:rotate(0deg)
+	}
+
+	100%{
+		-o-transform:rotate(360deg)
+	}
+}
+
+@-ms-keyframes ball_moveG{
+	0%{
+		-ms-transform:rotate(0deg)
+	}
+
+	100%{
+		-ms-transform:rotate(360deg)
+	}
+}
+
+@-webkit-keyframes ball_moveG{
+	0%{
+		-webkit-transform:rotate(0deg)
+	}
+
+	100%{
+		-webkit-transform:rotate(360deg)
+	}
+}
+
+@-moz-keyframes ball_moveG{
+	0%{
+		-moz-transform:rotate(0deg)
+	}
+
+	100%{
+		-moz-transform:rotate(360deg)
+	}
+}
+
+#bowlG.hide {
+  animation: hideop 2s linear 0s;
+  animation-fill-mode: forwards;
+}
+
+#loading_msg {
+  color: rgb(19, 116, 98);
+  font-size: 2em;
+  position: relative;
+  top: 40%;
+  left: 30%;
+}

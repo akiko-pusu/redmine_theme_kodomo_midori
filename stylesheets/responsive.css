@@ -130,4 +130,9 @@
   .mobile-toggle-button:after {
     color: #ffffff;
   }
+
+  .flyout-menu__avatar a:first-child {
+    margin-bottom: 6px;
+    margin-left: 4px;
+  }
 }
