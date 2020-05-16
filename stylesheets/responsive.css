@@ -135,4 +135,8 @@
     margin-bottom: 6px;
     margin-left: 4px;
   }
+
+  #theme_info .theme_description {
+    left: -100px;
+  }
 }

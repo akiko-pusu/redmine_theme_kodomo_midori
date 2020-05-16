@@ -1135,3 +1135,35 @@ div.splitcontentleft > ul {
   top: 40%;
   left: 30%;
 }
+
+#theme_info {
+  position: relative;
+  color: #217f66;
+}
+
+/* Tooltip text */
+#theme_info .theme_description {
+  visibility: hidden;
+  width: auto;
+  background-color: #ffffff;
+  color: #6da3a7;
+  text-align: left;
+  padding: 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 40px;
+  left: -40px;
+  font-size: smaller;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+#theme_info:hover .theme_description {
+  visibility: visible;
+}
+
+#theme_info .theme_description pre {
+  background: white url(../images/logo.png) no-repeat right 20px top -5px;
+  background-size: 50px;
+}
