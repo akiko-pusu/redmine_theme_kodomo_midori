@@ -182,6 +182,11 @@ docker run --rm -d -p 3000:3000/tcp redmine_theme_kodomo_midori_container:latest
 
 ## ChangeLog
 
+- 0.0.4
+  - Changelogin form.
+  - Add theme information on footer.
+  - Show theme info at welcome /login page via hover.
+  - Adjust some styles.
 - 0.0.3
   - Apply style: News and Forum
   - Update docker files. (Thanks @TomonoriMatsumura)
