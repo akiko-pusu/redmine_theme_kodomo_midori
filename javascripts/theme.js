@@ -1,3 +1,11 @@
+const themeInfo = {
+  version: '0.0.3',
+  author: 'Akiko Takano',
+  url: 'https://github.com/akiko-pusu/redmine_theme_kodomo_midori',
+  name: 'Kodomo Redmine green version',
+  description: 'Redmine theme for kids and children green version.'
+}
+
 // Script to append "Great Job!" message when access the closed issue.
 const setCloseRibbon = () => {
   const closedIssue = document.querySelector('div#content div.issue.closed')
@@ -15,7 +23,6 @@ const setCloseRibbon = () => {
 }
 
 let preventEvent = true
-let wrapper = document.getElementById('wrapper')
 
 const sleep = (ms) => {
   return new Promise(resolve => setTimeout(resolve, ms))
@@ -35,6 +42,23 @@ async function waitAction (event) {
     await sleep(1500)
     preventEvent = false
     event.target.click()
+  }
+}
+
+const setThemeInfo = () => {
+  let footer = document.querySelector('div.bgr')
+  if (footer) {
+    let infoText = ''
+    if (document.body.classList.contains('controller-account') || document.body.classList.contains('controller-welcome')) {
+      infoText = '<div class="theme_description"><pre>'
+      for (let key in themeInfo) {
+        infoText = infoText + key + ' : ' + themeInfo[key] + '\n'
+      }
+      infoText = infoText + '</pre></div>'
+    }
+
+    let beforeText = '/ Theme: <span id="theme_info">Kodomo Redmine green' + infoText + '</span> version'
+    footer.insertAdjacentHTML('beforeend', beforeText)
   }
 }
 
@@ -89,20 +113,8 @@ const setLoading = (event) => {
   }
 }
 
-// Test script to include Vue.js
-/*
-const dynamicallyLoadScript = (url) => {
-  let script = document.createElement('script') // create a script DOM node
-  script.src = url // set its src to the provided URL
-
-  document.head.appendChild(script) // add it to the end of the head section of the page (could change 'head' to 'body' to add it to the end of the body section instead)
-}
-
-const VUE_CDN_URL = 'https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js'
-*/
-
 if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', setThemeInfo)
   document.addEventListener('DOMContentLoaded', setCloseRibbon)
   document.addEventListener('DOMContentLoaded', setLoading)
-  // dynamicallyLoadScript(VUE_CDN_URL)
 }
