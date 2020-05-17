@@ -138,13 +138,17 @@ If the theme alone doesn't cover enough, I'm looking at simple JavaScript tweaks
 
 **英語**
 
-- Google fonts - Patrick Hand
+- Google fonts - [Patrick Hand](https://fonts.google.com/specimen/Patrick+Hand)
  - Designer: Patrick Wagesreiter
+ - License: [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+ - https://fonts.google.com/specimen/Patrick+Hand
 
 **日本語**
 
-- Google fonts - Kosugi Maru (as 'Noto Serif JP')
+- Google fonts - [Kosugi Maru](https://fonts.google.com/specimen/Noto+Serif+JP) (as 'Noto Serif JP')
   - Designer: MOTOYA
+  - License: [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - https://fonts.google.com/specimen/Noto+Serif+JP
 - あんずもじ
   - あんずもじに関しては、各自でのダウンロードと配置をお願いします
   - フォントが組み込まれない場合は、デフォルトの日本語フォントが利用されます
@@ -178,7 +182,6 @@ font
 
 - データ名はapplication.css に記載と同じとなります
 - 配置の上でRedmineの再起動をお願いいたします
-
 
 ### 配置方法
 
