@@ -23,9 +23,10 @@ If you are interested, try creating a theme for kids and different generations!
 - [for Japanese Users](#for-japanese-users)
   - [このテーマについて](#このテーマについて)
   - [テーマへのご意見 / ご協力について](#テーマへのご意見--ご協力について)
-  - [Webフォントについて](#webフォントについて)
-    - [配布サイト](#配布サイト)
-    - [利用フォント](#利用フォント)
+  - [利用しているフォントについて](#利用しているフォントについて)
+    - [あんずもじのご利用について](#あんずもじのご利用について)
+      - [配布サイト](#配布サイト)
+      - [配置手順](#配置手順)
   - [配置方法](#配置方法)
     - [テーマのみの配置](#テーマのみの配置)
     - [メッセージのカスタマイズ](#メッセージのカスタマイズ)
@@ -39,6 +40,8 @@ If you are interested, try creating a theme for kids and different generations!
 <!-- /TOC -->
 
 ## Screen shot
+
+NOTE: Following samples are using 'Patrick Hand', 'Anzu' (as Japanese font).
 
 ### PC
 <img src='images/screenshot-pc.png' width='500' title='PC version'>
@@ -127,25 +130,55 @@ If the theme alone doesn't cover enough, I'm looking at simple JavaScript tweaks
 
 テーマだけではカバーし切れていない部分は、簡単なJavaScriptでの調整や、プラグインと連携しての開発なども視野に入れていますので、ご意見のほどよろしくお願いいたします。
 
-### Webフォントについて
+### 利用しているフォントについて
 
-こちらのテーマでは、以下のフォントを利用させていただいております。ありがとうございます！
+こちらのテーマでは、以下のフォントの利用を想定しています。
+日本語に関しては、「あんずもじ」の利用を想定してのデザインになっております。
+お手数をおかけしますが、各自お手元でのフォントのダウンロードをお願いいたします。
 
-#### 配布サイト
+**英語**
+
+- Google fonts - Patrick Hand
+ - Designer: Patrick Wagesreiter
+
+**日本語**
+
+- Google fonts - Kosugi Maru (as 'Noto Serif JP')
+  - Designer: MOTOYA
+- あんずもじ
+  - あんずもじに関しては、各自でのダウンロードと配置をお願いします
+  - フォントが組み込まれない場合は、デフォルトの日本語フォントが利用されます
+
+#### あんずもじのご利用について
+
+大変可愛らしい文字ですので、もしお手元でご利用の際に組み込み可能でしたら、是非ご利用してみてください！
+あんずもじを利用するに当たって、以下の通りにお願いいたします。
+
+##### 配布サイト
 
 - あんずいろapricot×color
  - 配布サイトURL: <http://www8.plala.or.jp/p_dolce/index.html>
  - 作成者：京風子（Kyoko）さま
-- Google fomts - Patrick Hand
- - Designer: Patrick Wagesreiter
 
-#### 利用フォント
+##### 配置手順
 
-- あんずもじ
-- あんずもじ等幅
-- Google fomts - Patrick Hand
-  - <https://fonts.google.com/specimen/Patrick+Hand>
-  - License: SIL Open Font License (OFL)
+- 配布サイトURL: <http://www8.plala.or.jp/p_dolce/index.html> からフォントのダウンロードをお願いします
+  - あんずもじ
+  - あんずもじ等幅
+- font というディレクトリに、以下のように配置をお願いします
+
+```bash
+
+$ tree font
+font
+├── APJapanesefont.ttf
+└── APJapanesefontT.ttf
+
+```
+
+- データ名はapplication.css に記載と同じとなります
+- 配置の上でRedmineの再起動をお願いいたします
+
 
 ### 配置方法
 
@@ -219,6 +252,9 @@ http://localhost:3000/ にアクセスしてください。
 
 ## ChangeLog
 
+- 0.0.5
+  - Update README.
+  - Change Japanese font.
 - 0.0.4
   - Changelogin form.
   - Add theme information on footer.
