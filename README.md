@@ -16,6 +16,7 @@ If you are interested, try creating a theme for kids and different generations!
   - [News](#news)
   - [Message / Forum](#message--forum)
 - [Installation](#installation)
+- [Evaluate with docker image on DockerHub](#evaluate-with-docker-image-on-dockerhub)
 - [docker-compose](#docker-compose)
 - [Customize theme](#customize-theme)
 - [Contributions](#contributions)
@@ -29,6 +30,8 @@ If you are interested, try creating a theme for kids and different generations!
     - [テーマのみの配置](#テーマのみの配置)
     - [メッセージのカスタマイズ](#メッセージのカスタマイズ)
   - [おためし用Dockerfile](#おためし用dockerfile)
+    - [ローカルで直にビルドして起動する場合](#ローカルで直にビルドして起動する場合)
+    - [テーマを編集開発しながら起動する場合](#テーマを編集開発しながら起動する場合)
 - [テーマのカスタマイズ](#テーマのカスタマイズ)
 - [Special Thanks](#special-thanks)
 - [ChangeLog](#changelog)
@@ -59,10 +62,27 @@ If you are interested, try creating a theme for kids and different generations!
 - Open Redmine page, and go to Administration > Settings > Display
 - Enable the redmine_theme_kodomo_midori from Theme, and save settings
 
+## Evaluate with docker image on DockerHub
+
+You can try this theme using docker image on DockerHub.
+
+<https://hub.docker.com/repository/docker/akiko/redmine_theme_kodomo_midori>
+
+```bash
+docker pull akiko/redmine_theme_kodomo_midori
+
+# run redmine localy and enabled to access via port 3000
+docker run --rm --name kodomo_redmine -p 3000:3000 -it akiko/redmine_theme_kodomo_midori:latest
+```
+
+Just after access to Redmine (http://localhost:3000), you can log in to the Redmine using username: admin /password: admin.
+
 ## docker-compose
 
-You can try this theme via Docker.
+You can try and edit this theme via docker compose.
 
+- git clone https://github.com/akiko-pusu/redmine_theme_kodomo_midori
+- cd redmine_theme_kodomo_midori
 - ``docker-compose build --no-cache``
 - ``docker-compose up -d``
 - Access to http://localhost:3000/ on web browser
@@ -159,6 +179,8 @@ $ tree -L 1
 
 このリポジトリの直下にDockerfileがありますので、簡単な確認が可能です。
 
+#### ローカルで直にビルドして起動する場合
+
 ```bash
 # build image
 docker build -t redmine_theme_kodomo_midori_container:latest .
@@ -168,6 +190,21 @@ docker run --rm -d -p 3000:3000/tcp redmine_theme_kodomo_midori_container:latest
 ```
 
 コンテナを起動後、アカウント:admin / パスワード: admin でログインできます。
+
+#### テーマを編集開発しながら起動する場合
+
+```bash
+git clone https://github.com/akiko-pusu/redmine_theme_kodomo_midori
+cd redmine_theme_kodomo_midori
+docker-compose build --no-cache
+docker-compose up -d
+```
+
+上記で、テーマが適用された状態でRedmineが起動します。
+http://localhost:3000/ にアクセスしてください。
+
+また、該当のディレクトリで、直にCSS, JavaScriptを編集しつつ、動作確認ができます。
+
 
 ## テーマのカスタマイズ
 
