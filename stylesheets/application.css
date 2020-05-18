@@ -1,6 +1,9 @@
 /* load the default Redmine stylesheet */
-
 @import url(../../../stylesheets/application.css);
+
+/* import Google fonts */
+@import url(https://fonts.googleapis.com/css2?family=Patrick+Hand);
+@import url(https://fonts.googleapis.com/css2?family=Kosugi+Maru);
 
 /* あんずもじご利用の場合はREADMEにしたがって配置して下さい */
 @font-face {
@@ -14,18 +17,10 @@
   src: url("../font/APJapanesefontT.ttf") format("truetype")
 }
 
-@font-face {
-  font-family: 'Patrick Hand';
-  src: url("../font/PatrickHand-Regular.ttf") format("truetype")
-}
-
-@font-face {
-  font-family: 'Noto Serif JP';
-  src: url("../font/KosugiMaru-Regular.ttf") format("truetype")
-}
-
 body {
-  font-family: 'Patrick Hand', anzu, 'Noto Serif JP', Verdana, sans-serif;
+  /* あんずもじ利用の場合は、'Kosugi Maru' の前に 'anzu' を指定して下さい */
+  /* font-family: 'Patrick Hand', 'anzu', 'Kosugi Maru', Verdana, sans-serif; */
+  font-family: 'Patrick Hand', 'Kosugi Maru', Verdana, sans-serif;
   font-size: 20px;
   color: rgb(1, 55, 36);
 }
@@ -34,14 +29,15 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Patrick Hand', anzu, 'Noto Serif JP';
+  font-family: 'Patrick Hand', 'Kosugi Maru', anzu;
   padding: 2px 10px 1px 0px;
   margin: 0 0 10px 0;
 }
 
-pre,
-code {
-  font-family: 'Patrick Hand', anzuT, 'Noto Serif JP', Consolas, Menlo, "Liberation Mono", Courier, monospace;
+pre, code {
+  /* あんずもじ利用の場合は、'Kosugi Maru' の前に 'anzuT' を指定して下さい */
+  /* font-family: 'Patrick Hand', 'anzuT', 'Kosugi Maru', Consolas, Menlo, "Liberation Mono", Courier, monospace; */
+  font-family: 'Patrick Hand', 'Kosugi Maru', Consolas, Menlo, "Liberation Mono", Courier, monospace;
 }
 
 pre,
@@ -253,7 +249,7 @@ div.box p label::before {
 }
 
 #projects-index ul.projects div.root a.project {
-  font-family: "anzu", 'Noto Serif JP';
+  font-family: 'Patrick Hand', 'Kosugi Maru';
   font-size: 18px;
 }
 
@@ -735,7 +731,7 @@ textarea {
 
 input[name='commit'],
 input[type='submit'] {
-  font-family: anzu, 'Noto Serif JP';
+  font-family: 'Patrick Hand', 'Kosugi Maru';
   font-size: 12pt;
   display: inline-block;
   /* padding: 0.5em 0.5em; */
@@ -755,7 +751,7 @@ input[type='submit']:hover {
 }
 
 input[name='continue'] {
-  font-family: anzu, 'Noto Serif JP';
+  font-family: 'Patrick Hand', 'Kosugi Maru';
   font-size: 12pt;
   display: inline-block;
   padding: 0.5em 0.5em;
@@ -1183,4 +1179,16 @@ div.splitcontentleft > ul {
 #theme_info .theme_description pre {
   background: white url(../images/logo.png) no-repeat right 20px top -5px;
   background-size: 50px;
+}
+
+div.news span.summary {
+  color: #82603f;
+  margin-left: 10px;
+  background: linear-gradient(transparent 90%, #f7d8c2 90%);
+  /* background: linear-gradient(transparent 70%, #fbe4d1 10%); */
+  font-size: small;
+}
+
+abbr[title] {
+  text-decoration: none;
 }

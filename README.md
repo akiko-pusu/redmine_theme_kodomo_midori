@@ -19,6 +19,7 @@ If you are interested, try creating a theme for kids and different generations!
 - [Evaluate with docker image on DockerHub](#evaluate-with-docker-image-on-dockerhub)
 - [docker-compose](#docker-compose)
 - [Customize theme](#customize-theme)
+- [Fonts](#fonts)
 - [Contributions](#contributions)
 - [for Japanese Users](#for-japanese-users)
   - [このテーマについて](#このテーマについて)
@@ -100,6 +101,11 @@ You can try and edit this theme via docker compose.
 You can also customize this theme under dockerenvironment.
 Please edit stylesheets/application.cs, stylesheets/responsive.css and javascripts/theme.js.
 
+## Fonts
+
+The basic font is the Google font "Patrick Hand". So that a handwriting style is applied to the text.
+You can customize the font to your liking by modifying the CSS.
+
 ## Contributions
 
 I tried to make it for elementary and junior high school students, but it doesn't cover all the functions of Redmine, and there are still a lot of things that are not styled to look good.
@@ -145,10 +151,10 @@ If the theme alone doesn't cover enough, I'm looking at simple JavaScript tweaks
 
 **日本語**
 
-- Google fonts - [Kosugi Maru](https://fonts.google.com/specimen/Noto+Serif+JP) (as 'Noto Serif JP')
+- Google fonts - [Kosugi Maru](https://fonts.google.com/specimen/Kosugi+Maru) (as 'Kosugi Maru')
   - Designer: MOTOYA
   - License: [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - https://fonts.google.com/specimen/Noto+Serif+JP
+  - https://fonts.google.com/specimen/Kosugi+Maru
 - あんずもじ
   - あんずもじに関しては、各自でのダウンロードと配置をお願いします
   - フォントが組み込まれない場合は、デフォルトの日本語フォントが利用されます
@@ -181,6 +187,8 @@ font
 ```
 
 - データ名はapplication.css に記載と同じとなります
+- application.css の設定で、'Kosugi Maru' の前に 'anzu' を指定して下さい
+  - 例: ``font-family: 'Patrick Hand', 'anzu', 'Kosugi Maru'``
 - 配置の上でRedmineの再起動をお願いいたします
 
 ### 配置方法
