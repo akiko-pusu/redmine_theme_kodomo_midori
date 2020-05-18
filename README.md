@@ -263,6 +263,11 @@ http://localhost:3000/ にアクセスしてください。
 
 ## ChangeLog
 
+- 0.0.6
+  - Update README.
+  - Change the way to import fonts via webfonts.
+  - Add description to store and use Anzu font.
+  - Some css Change.
 - 0.0.5
   - Update README.
   - Change Japanese font.
