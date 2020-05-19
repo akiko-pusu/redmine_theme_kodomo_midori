@@ -3,18 +3,24 @@
 @media screen and (max-width: 899px) {
 
   #header {
-    background-image: none;
+    background: #76ccc0;
+    background-image:
+      repeating-linear-gradient(44deg,
+        rgba(170, 238, 204, 0.3),
+        rgba(170, 238, 204, 0.3) 31px,
+        rgba(0, 0, 0, 0) 0,
+        rgba(0, 0, 0, 0) 62px),
+      repeating-linear-gradient(134deg,
+        rgba(0, 179, 179, 0.43),
+        rgba(0, 179, 179, 0.43) 31px,
+        rgba(0, 0, 0, 0) 0,
+        rgba(0, 0, 0, 0) 62px);
   }
 
   #content>.contextual {
     background: white url(../images/logo-responsive.png) no-repeat 10px;
     background-position: right top;
     background-size: contain;
-  }
-
-  #project-jump.drdn {
-    background-color: rgb(86, 199, 165);
-    color: #ffffff;
   }
 
   #project-jump .drdn-trigger {
@@ -30,19 +36,6 @@
     border: 0;
   }
 
-  #project-jump {
-    background-image:
-      repeating-linear-gradient(44deg,
-        rgba(170, 238, 204, 0.3),
-        rgba(170, 238, 204, 0.3) 31px,
-        rgba(0, 0, 0, 0) 0,
-        rgba(0, 0, 0, 0) 62px),
-      repeating-linear-gradient(134deg,
-        rgba(0, 179, 179, 0.43),
-        rgba(0, 179, 179, 0.43) 31px,
-        rgba(0, 0, 0, 0) 0,
-        rgba(0, 0, 0, 0) 62px);
-  }
 
   .flyout-menu {
     position: absolute;
