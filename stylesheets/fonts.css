@@ -5,13 +5,13 @@
 /* kiroji */
 @font-face {
   font-family: kiroji;
-  src: url("../font/kiloji/kiloji.ttf") format("truetype")
+  src: url("../font/kiloji/kiloji.woff") format("woff")
 }
 
 /* kiroji */
 @font-face {
   font-family: kiroji_b;
-  src: url("../font/kiloji/kiloji_b.ttf") format("truetype")
+  src: url("../font/kiloji/kiloji_b.woff") format("woff")
 }
 
 :root {

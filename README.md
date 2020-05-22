@@ -164,6 +164,7 @@ If the theme alone doesn't cover enough, I'm looking at simple JavaScript tweaks
 #### きろ字のご利用について
 
 New BSDライセンスで利用可能な「きろ字」をメインのフォントとして利用させていただききました。
+ttfからwoffへ変換して利用としております。
 
 ##### きろ字情報
 
@@ -177,7 +178,11 @@ font
 └── kiloji
     ├── License.txt
     ├── kiloji.ttf
-    └── kiloji_b.ttf
+    ├── kiloji.woff
+    ├── kiloji_b.ttf
+    └── kiloji_b.woff
+
+1 directory, 5 files
 ```
 
 標準フォント、Google fontでのご利用に切り替えたい場合は、以下の方法でfonts.cssを調節してください。
