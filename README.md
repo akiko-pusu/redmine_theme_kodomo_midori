@@ -283,9 +283,15 @@ http://localhost:3000/ にアクセスしてください。
 
 - Redmine.org - <https://redmine.org/>
 - Japanese Redmine Community - <http://redmine.jp/community/>
+- Font developers
 
 ## ChangeLog
 
+- 0.0.7
+  - Update README.
+  - Use kiloji as Japanese font.
+  - Update style for administration.
+  - Some css Change.
 - 0.0.6
   - Update README.
   - Change the way to import fonts via webfonts.
