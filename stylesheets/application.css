@@ -1,26 +1,10 @@
 /* load the default Redmine stylesheet */
 @import url(../../../stylesheets/application.css);
 
-/* import Google fonts */
-@import url(https://fonts.googleapis.com/css2?family=Patrick+Hand);
-@import url(https://fonts.googleapis.com/css2?family=Kosugi+Maru);
-
-/* あんずもじご利用の場合はREADMEにしたがって配置して下さい */
-@font-face {
-  font-family: anzu;
-  src: url("../font/APJapanesefont.ttf") format("truetype")
-}
-
-/* あんずもじご利用の場合はREADMEにしたがって配置して下さい */
-@font-face {
-  font-family: anzuT;
-  src: url("../font/APJapanesefontT.ttf") format("truetype")
-}
+@import url(./fonts.css);
 
 body {
-  /* あんずもじ利用の場合は、'Kosugi Maru' の前に 'anzu' を指定して下さい */
-  /* font-family: 'Patrick Hand', 'anzu', 'Kosugi Maru', Verdana, sans-serif; */
-  font-family: 'Patrick Hand', 'Kosugi Maru', Verdana, sans-serif;
+  font-family: var(--font-family);
   font-size: 20px;
   color: rgb(1, 55, 36);
 }
@@ -29,7 +13,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Patrick Hand', 'Kosugi Maru', anzu;
+  font-family: var(--font-family);
   padding: 2px 10px 1px 0px;
   margin: 0 0 10px 0;
 }
@@ -42,18 +26,7 @@ pre, code {
 
 pre,
 code {
-  background-image :
-  repeating-linear-gradient(to bottom,
-  transparent 22px,
-  rgba(153, 153, 153, 0.15) 23px,  rgba(153, 153, 153, 0.15) 23px,
-  transparent 24px,  transparent 45px,
-  rgba(153, 153, 153, 0.15) 46px,  rgba(153, 153, 153, 0.15) 46px,
-  transparent 47px,  transparent 68px,
-  rgba(153, 153, 153, 0.15) 69px,  rgba(153, 153, 153, 0.15) 69px,
-  transparent 70px,  transparent 91px,
-  rgba(153, 153, 153, 0.15) 92px,  rgba(153, 153, 153, 0.15) 92px,
-  transparent 93px,  transparent 114px,
-  rgba(153, 153, 153, 0) 115px,  rgba(153, 153, 153, 0) 115px),
+  font-family: var(--font-family-t);
 
 repeating-linear-gradient(to right,
   transparent 22px,
@@ -249,7 +222,7 @@ div.box p label::before {
 }
 
 #projects-index ul.projects div.root a.project {
-  font-family: 'Patrick Hand', 'Kosugi Maru';
+  font-family: var(--font-family);
   font-size: 18px;
 }
 
@@ -736,9 +709,9 @@ textarea {
   width: 90%;
 }
 
-input[name='commit'],
-input[type='submit'] {
-  font-family: 'Patrick Hand', 'Kosugi Maru';
+input[name="commit"],
+input[type="submit"] {
+  font-family: var(--font-family-t);
   font-size: 12pt;
   display: inline-block;
   /* padding: 0.5em 0.5em; */
@@ -757,8 +730,8 @@ input[type='submit']:hover {
   box-shadow: 0px 0px 0px 5px #76d7bd;
 }
 
-input[name='continue'] {
-  font-family: 'Patrick Hand', 'Kosugi Maru';
+input[name="continue"] {
+  font-family: var(--font-family);
   font-size: 12pt;
   display: inline-block;
   padding: 0.5em 0.5em;
