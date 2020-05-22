@@ -1,5 +1,5 @@
 const themeInfo = {
-  version: '0.0.6',
+  version: '0.0.7',
   author: 'Akiko Takano',
   url: 'https://github.com/akiko-pusu/redmine_theme_kodomo_midori',
   name: 'Kodomo Redmine green version',

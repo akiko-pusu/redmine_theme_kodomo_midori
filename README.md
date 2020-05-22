@@ -8,8 +8,6 @@ This theme is still experimental, but I hope to provide a more friendly Redmine 
 
 If you are interested, try creating a theme for kids and different generations!
 
-<!-- TOC depthFrom:2 orderedList:false -->
-
 - [Screen shot](#screen-shot)
   - [PC](#pc)
   - [Responsive](#responsive)
@@ -25,6 +23,8 @@ If you are interested, try creating a theme for kids and different generations!
   - [このテーマについて](#このテーマについて)
   - [テーマへのご意見 / ご協力について](#テーマへのご意見--ご協力について)
   - [利用しているフォントについて](#利用しているフォントについて)
+    - [きろ字のご利用について](#きろ字のご利用について)
+      - [きろ字情報](#きろ字情報)
     - [あんずもじのご利用について](#あんずもじのご利用について)
       - [配布サイト](#配布サイト)
       - [配置手順](#配置手順)
@@ -37,8 +37,6 @@ If you are interested, try creating a theme for kids and different generations!
 - [テーマのカスタマイズ](#テーマのカスタマイズ)
 - [Special Thanks](#special-thanks)
 - [ChangeLog](#changelog)
-
-<!-- /TOC -->
 
 ## Screen shot
 
@@ -139,7 +137,7 @@ If the theme alone doesn't cover enough, I'm looking at simple JavaScript tweaks
 ### 利用しているフォントについて
 
 こちらのテーマでは、以下のフォントの利用を想定しています。
-日本語に関しては、「あんずもじ」の利用を想定してのデザインになっております。
+日本語に関しては、「きろ字 / Kosugi Maru / あんずもじ」の利用を想定してのデザインになっております。
 お手数をおかけしますが、各自お手元でのフォントのダウンロードをお願いいたします。
 
 **英語**
@@ -151,6 +149,10 @@ If the theme alone doesn't cover enough, I'm looking at simple JavaScript tweaks
 
 **日本語**
 
+- きろ字
+  - New BSDライセンスに基づくきろ字をメインのフォントとして利用させていただきます
+  - https://ola.kironono.com/entry/fonts-kiloji
+  - フォントが組み込まれない場合は、デフォルトの日本語フォントが利用されます
 - Google fonts - [Kosugi Maru](https://fonts.google.com/specimen/Kosugi+Maru) (as 'Kosugi Maru')
   - Designer: MOTOYA
   - License: [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
@@ -158,6 +160,27 @@ If the theme alone doesn't cover enough, I'm looking at simple JavaScript tweaks
 - あんずもじ
   - あんずもじに関しては、各自でのダウンロードと配置をお願いします
   - フォントが組み込まれない場合は、デフォルトの日本語フォントが利用されます
+
+#### きろ字のご利用について
+
+New BSDライセンスで利用可能な「きろ字」をメインのフォントとして利用させていただききました。
+
+##### きろ字情報
+
+- 手書き風総合書体「きろ字」
+ - 詳細情報: <https://ola.kironono.com/entry/fonts-kiloji>
+ - 作成者: kilo さま
+
+```
+% tree font
+font
+└── kiloji
+    ├── License.txt
+    ├── kiloji.ttf
+    └── kiloji_b.ttf
+```
+
+標準フォント、Google fontでのご利用に切り替えたい場合は、以下の方法でfonts.cssを調節してください。
 
 #### あんずもじのご利用について
 
@@ -168,7 +191,7 @@ If the theme alone doesn't cover enough, I'm looking at simple JavaScript tweaks
 
 - あんずいろapricot×color
  - 配布サイトURL: <http://www8.plala.or.jp/p_dolce/index.html>
- - 作成者：京風子（Kyoko）さま
+ - 作成者: 京風子（Kyoko）さま
 
 ##### 配置手順
 
@@ -186,9 +209,9 @@ font
 
 ```
 
-- データ名はapplication.css に記載と同じとなります
-- application.css の設定で、'Kosugi Maru' の前に 'anzu' を指定して下さい
-  - 例: ``font-family: 'Patrick Hand', 'anzu', 'Kosugi Maru'``
+- フォントはfonts.css に記載と同じとなります
+- fonts.css の設定で、'Patrick Hand' の後に 'anzu' を指定して下さい
+  - 例: ``font-family: 'Patrick Hand', 'anzu', 'kiroji_b', 'Kosugi Maru'``
 - 配置の上でRedmineの再起動をお願いいたします
 
 ### 配置方法
@@ -260,9 +283,15 @@ http://localhost:3000/ にアクセスしてください。
 
 - Redmine.org - <https://redmine.org/>
 - Japanese Redmine Community - <http://redmine.jp/community/>
+- Font developers
 
 ## ChangeLog
 
+- 0.0.7
+  - Update README.
+  - Use kiloji as Japanese font.
+  - Update style for administration.
+  - Some css Change.
 - 0.0.6
   - Update README.
   - Change the way to import fonts via webfonts.
