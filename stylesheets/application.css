@@ -793,13 +793,27 @@ select.expandable {
   margin-bottom: 0;
 }
 
-div.filedroplistner fieldset {
+div#query_form_content > fieldset {
   border: 1px solid #e4e4e4;
   margin-bottom: 4px;
   padding-top: 4px;
   min-width: inherit;
   border-radius: 4px;
-  background-color: #ffeebd;
+  background-color: #f3f7d9;
+  border: none;
+}
+
+fieldset {
+  border-radius:4px;
+}
+
+form#issue-form fieldset {
+  border: 1px solid #e4e4e4;
+  margin-bottom: 4px;
+  padding-top: 4px;
+  min-width: inherit;
+  border-radius: 4px;
+  background-color: #fffcf4;;
   border: none;
 }
 
