@@ -1,0 +1,20 @@
+/* import Google fonts */
+@import url(https://fonts.googleapis.com/css2?family=Patrick+Hand);
+@import url(https://fonts.googleapis.com/css2?family=Kosugi+Maru);
+
+/* kiroji */
+@font-face {
+  font-family: kiroji;
+  src: url("../font/kiroji/kiloji.ttf") format("truetype")
+}
+
+/* kiroji */
+@font-face {
+  font-family: kiroji_b;
+  src: url("../font/kiroji/kiloji_b.ttf") format("truetype")
+}
+
+:root {
+  --font-family: 'Patrick Hand', 'kiroji_b', 'Kosugi Maru', Verdana, sans-serif;
+  --font-family-t: 'Patrick Hand', 'kiroji', 'Kosugi Maru', Consolas, Menlo, "Liberation Mono", Courier, monospace;
+}
