@@ -631,7 +631,7 @@ div.issue div.description {
   border-radius: 6px;
 }
 
-div.description > p > strong {
+div.issue > div.description > p > strong {
   position: relative;
   color: #832929;
   padding: 0.5em 1em 0.5em 2em;
@@ -639,7 +639,7 @@ div.description > p > strong {
   border-radius: 0.5em;
 }
 
-div.description > p > strong::after {
+div.issue > div.description > p > strong::after {
   position: absolute;
   top: 50%;
   left: 1em;
@@ -653,7 +653,6 @@ div.description > p > strong::after {
 
 div.description div.wiki {
   background-color: white;
-  /* border: 0.5px dotted rgb(183, 182, 181); */
   border-radius: 2px;
   padding-left: 4px;
   background-image: linear-gradient(
