@@ -1,26 +1,50 @@
 @import url(../../../stylesheets/responsive.css);
 
 @media screen and (max-width: 899px) {
-
   #header {
     background: #76ccc0;
-    background-image:
-      repeating-linear-gradient(44deg,
+    background-image: repeating-linear-gradient(
+        44deg,
         rgba(170, 238, 204, 0.3),
         rgba(170, 238, 204, 0.3) 31px,
         rgba(0, 0, 0, 0) 0,
-        rgba(0, 0, 0, 0) 62px),
-      repeating-linear-gradient(134deg,
+        rgba(0, 0, 0, 0) 62px
+      ),
+      repeating-linear-gradient(
+        134deg,
         rgba(0, 179, 179, 0.43),
         rgba(0, 179, 179, 0.43) 31px,
         rgba(0, 0, 0, 0) 0,
-        rgba(0, 0, 0, 0) 62px);
+        rgba(0, 0, 0, 0) 62px
+      );
   }
 
-  #content>.contextual {
+  #content > .contextual {
     background: white url(../images/logo-responsive.png) no-repeat 10px;
     background-position: right top;
     background-size: contain;
+  }
+
+  #content > h2 {
+    position: initial;
+    padding-left: 0;
+  }
+
+  #content > h2:before {
+    position: relative;
+    left: 5px;
+    top: 0px;
+    content: "";
+    font-size: 0.8em;
+
+    padding: 0 0.8em 0 0.2em;
+    background: #4caf50;
+    color: #fff;
+    height: 1em;
+    width: 0.8em;
+    text-align: center;
+    border-radius: 80% 3%;
+    margin-right: 10px;
   }
 
   #project-jump .drdn-trigger {
@@ -35,7 +59,6 @@
     line-height: 40px;
     border: 0;
   }
-
 
   .flyout-menu {
     position: absolute;
@@ -67,7 +90,7 @@
 
   .flyout-menu ul li a:hover {
     background-color: rgb(255, 255, 185);
-    color: #4CAF50;
+    color: #4caf50;
   }
 
   .flyout-menu ul li a::before {
@@ -78,7 +101,7 @@
     font-size: 0.8em;
 
     padding: 0 0.8em 0 0.2em;
-    background: #4CAF50;
+    background: #4caf50;
     color: #fff;
     height: 1em;
     width: 0.8em;
@@ -93,7 +116,7 @@
     height: 26px;
     margin: 0;
     padding-left: 4px;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: white;
     background-color: #037107;
