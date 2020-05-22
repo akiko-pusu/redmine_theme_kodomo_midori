@@ -18,7 +18,7 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 RUN apt-get update
 RUN apt-get install -qq -y --no-install-recommends \
-    git vim subversion      \
+    git vim subversion libpq-dev \
     sqlite3 && rm -rf /var/lib/apt/lists/*
 
 RUN cd /app && svn co http://svn.redmine.org/redmine/branches/4.0-stable/ redmine
@@ -36,11 +36,15 @@ RUN echo $'test:\n\
 development:\n\
   adapter: sqlite3\n\
   database: /app/data/redmine_development.sqlite3\n\
+  encoding: utf8mb4\n\
+production:\n\
+  adapter: postgresql\n\
+  database: redmine\n\
   encoding: utf8mb4\n'\
 >> config/database.yml
 
 RUN gem update bundler
-RUN bundle config set without 'postgresql rmagick mysql'
+RUN bundle config set without 'rmagick mysql'
 RUN bundle install
 RUN bundle exec rake db:migrate && bundle exec rake generate_secret_token
 RUN bundle exec rails runner public/themes/redmine_theme_kodomo_midori/miscs/sample.rb
