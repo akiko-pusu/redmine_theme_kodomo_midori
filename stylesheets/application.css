@@ -534,6 +534,13 @@ article.news-article div.wiki::before {
   transform: rotate(12deg);
 }
 
+body.controller-issues.action-show #issue_description_and_toolbar {
+  display: block !important;
+}
+
+body.controller-issues.action-show span.icon.icon-edit {
+  display: none;
+}
 /*-- show news --*/
 body.controller-news.action-show div#content {
   padding-left: 20px;
