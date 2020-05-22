@@ -40,7 +40,7 @@ development:\n\
 production:\n\
   adapter: postgresql\n\
   database: redmine\n\
-  encoding: utf8mb4\n'\
+  encoding: utf8\n'\
 >> config/database.yml
 
 RUN gem update bundler
