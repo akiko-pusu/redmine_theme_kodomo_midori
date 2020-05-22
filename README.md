@@ -8,7 +8,35 @@ This theme is still experimental, but I hope to provide a more friendly Redmine 
 
 If you are interested, try creating a theme for kids and different generations!
 
-<!-- TOC depthFrom:2 orderedList:false -->autoauto- [Screen shot](#screen-shot)auto    - [PC](#pc)auto    - [Responsive](#responsive)auto    - [News](#news)auto    - [Message / Forum](#message--forum)auto- [Installation](#installation)auto- [Evaluate with docker image on DockerHub](#evaluate-with-docker-image-on-dockerhub)auto- [docker-compose](#docker-compose)auto- [Customize theme](#customize-theme)auto- [Fonts](#fonts)auto- [Contributions](#contributions)auto- [for Japanese Users](#for-japanese-users)auto    - [このテーマについて](#このテーマについて)auto    - [テーマへのご意見 / ご協力について](#テーマへのご意見--ご協力について)auto    - [利用しているフォントについて](#利用しているフォントについて)auto        - [あんずもじのご利用について](#あんずもじのご利用について)auto            - [配布サイト](#配布サイト)auto            - [配置手順](#配置手順)auto    - [配置方法](#配置方法)auto        - [テーマのみの配置](#テーマのみの配置)auto        - [メッセージのカスタマイズ](#メッセージのカスタマイズ)auto    - [おためし用Dockerfile](#おためし用dockerfile)auto        - [ローカルで直にビルドして起動する場合](#ローカルで直にビルドして起動する場合)auto        - [テーマを編集開発しながら起動する場合](#テーマを編集開発しながら起動する場合)auto- [テーマのカスタマイズ](#テーマのカスタマイズ)auto- [Special Thanks](#special-thanks)auto- [ChangeLog](#changelog)autoauto<!-- /TOC -->
+- [Screen shot](#screen-shot)
+  - [PC](#pc)
+  - [Responsive](#responsive)
+  - [News](#news)
+  - [Message / Forum](#message--forum)
+- [Installation](#installation)
+- [Evaluate with docker image on DockerHub](#evaluate-with-docker-image-on-dockerhub)
+- [docker-compose](#docker-compose)
+- [Customize theme](#customize-theme)
+- [Fonts](#fonts)
+- [Contributions](#contributions)
+- [for Japanese Users](#for-japanese-users)
+  - [このテーマについて](#このテーマについて)
+  - [テーマへのご意見 / ご協力について](#テーマへのご意見--ご協力について)
+  - [利用しているフォントについて](#利用しているフォントについて)
+    - [きろ字のご利用について](#きろ字のご利用について)
+      - [きろ字情報](#きろ字情報)
+    - [あんずもじのご利用について](#あんずもじのご利用について)
+      - [配布サイト](#配布サイト)
+      - [配置手順](#配置手順)
+  - [配置方法](#配置方法)
+    - [テーマのみの配置](#テーマのみの配置)
+    - [メッセージのカスタマイズ](#メッセージのカスタマイズ)
+  - [おためし用Dockerfile](#おためし用dockerfile)
+    - [ローカルで直にビルドして起動する場合](#ローカルで直にビルドして起動する場合)
+    - [テーマを編集開発しながら起動する場合](#テーマを編集開発しながら起動する場合)
+- [テーマのカスタマイズ](#テーマのカスタマイズ)
+- [Special Thanks](#special-thanks)
+- [ChangeLog](#changelog)
 
 ## Screen shot
 
@@ -137,7 +165,7 @@ If the theme alone doesn't cover enough, I'm looking at simple JavaScript tweaks
 
 New BSDライセンスで利用可能な「きろ字」をメインのフォントとして利用させていただききました。
 
-##### 配布サイト
+##### きろ字情報
 
 - 手書き風総合書体「きろ字」
  - 詳細情報: <https://ola.kironono.com/entry/fonts-kiloji>
