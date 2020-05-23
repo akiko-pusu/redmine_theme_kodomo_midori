@@ -292,6 +292,12 @@ http://localhost:3000/ にアクセスしてください。
 
 ## ChangeLog
 
+- 0.0.8
+  - Update README
+  - Apply some settings for build / deploy to Heroku demo site.
+  - Change to use woff and woff2 type of kiloji as main Japanese font. (Thanks, kiro-san!)
+  - Hide sidebar at showin issue page.
+  - Change style to display changesets at issue page.
 - 0.0.7
   - Update README.
   - Use kiloji as Japanese font.
