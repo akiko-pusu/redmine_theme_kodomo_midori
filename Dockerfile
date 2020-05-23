@@ -46,10 +46,10 @@ production:\n\
 RUN gem update bundler
 RUN bundle config set without 'rmagick mysql'
 RUN bundle install
-RUN bundle exec rake db:migrate && bundle exec rake generate_secret_token
-RUN bundle exec rails runner public/themes/redmine_theme_kodomo_midori/miscs/sample.rb
 
 WORKDIR /app/redmine
 
 EXPOSE 3000
+
+ENTRYPOINT ["sh", "./public/themes/redmine_theme_kodomo_midori/miscs/docker-entrypoint.sh"]
 CMD ["rails", "server", "-b", "0.0.0.0"]
