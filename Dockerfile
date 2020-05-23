@@ -46,6 +46,7 @@ production:\n\
 RUN gem update bundler
 RUN bundle config set without 'rmagick mysql'
 RUN bundle install
+RUN bundle exec rake generate_secret_token
 
 WORKDIR /app/redmine
 
