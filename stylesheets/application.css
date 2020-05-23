@@ -197,6 +197,35 @@ div.tooltip:hover span.tip {
   display: block;
 }
 
+div#issue-changesets {
+  border-radius: 6px;
+  border: 1px solid #a6a5a570;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 2px 2px 3px #c3a96d;
+  margin: auto;
+  display: block;
+  width: auto;
+  max-width: 400px;
+}
+
+div#issue-changesets div.changeset {
+  display: none;
+}
+
+div#issue-changesets > h3 {
+  background: linear-gradient(transparent 60%, #ffe5667d 60%);
+}
+
+body.controller-issues.action-show div#sidebar {
+  display: none;
+}
+
+body.controller-issues.action-show div#content {
+  margin: 0 auto;
+  width: 80%;
+}
+
 #header {
   background: white url(../images/logo.png) no-repeat 10px;
   background-position: 20px 20px;

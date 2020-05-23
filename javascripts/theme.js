@@ -22,6 +22,31 @@ const setCloseRibbon = () => {
   }
 }
 
+const displayChangeSets = () => {
+  let changeSets = document.querySelectorAll('div#issue-changesets > div.changeset')
+  if (changeSets == undefined) {
+    return false
+  }
+
+  for (let i = 0; i < changeSets.length; i++) {
+    let changeSet = changeSets[i]
+    if　(changeSet.style.display == "block") {
+      changeSet.style.display ="none"
+    } else {
+      changeSet.style.display = "block"
+    }
+  }
+}
+
+const setIssueStyle = () => {
+  if (document.body.classList.contains('controller-issue') || document.body.classList.contains('action-show')) {
+    const changeSetheader = document.querySelector('div#issue-changesets > h3')
+    if (changeSetheader) {
+      changeSetheader.addEventListener('click', displayChangeSets, false)
+    }
+  }
+}
+
 let preventEvent = true
 
 const sleep = (ms) => {
@@ -117,4 +142,5 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', setThemeInfo)
   document.addEventListener('DOMContentLoaded', setCloseRibbon)
   document.addEventListener('DOMContentLoaded', setLoading)
+  document.addEventListener('DOMContentLoaded', setIssueStyle)
 }

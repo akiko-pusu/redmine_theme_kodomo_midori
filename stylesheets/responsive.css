@@ -155,4 +155,18 @@
   #theme_info .theme_description {
     left: -100px;
   }
+
+  div#issue-changesets {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  div#issue-changesets div.changeset {
+    display: block;
+  }
+
+  body.controller-issues.action-show div#content {
+    margin: 0 auto;
+    width: 100%;
+  }
 }
