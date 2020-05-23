@@ -51,5 +51,5 @@ RUN bundle exec rails runner public/themes/redmine_theme_kodomo_midori/miscs/sam
 
 WORKDIR /app/redmine
 
-EXPOSE  3000
+EXPOSE 3000
 CMD ["rails", "server", "-b", "0.0.0.0"]
