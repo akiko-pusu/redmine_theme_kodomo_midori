@@ -56,6 +56,7 @@ const sleep = (ms) => {
 async function waitAction (event) {
   let wrapper = document.getElementById('wrapper')
   if (wrapper && preventEvent) {
+    setLoadingHtml()
     let message = 'Great work!'
     if (this.action === 'login') {
       message = 'Welcome!'
@@ -110,7 +111,9 @@ const setLoading = (event) => {
   if (logoutLink) {
     logoutLink.addEventListener('click', { action: 'logout', handleEvent: waitAction }, false)
   }
+}
 
+const setLoadingHtml = () => {
   // IE11 not support literal..... ;-(
   /*
   let loaderHtml = `
@@ -124,12 +127,12 @@ const setLoading = (event) => {
   `
   */
 
-  let loaderHtml = '<div id="bowl_ringG">' +
-    '<div class="ball_holderG">' +
-      '<div class="ballG">' +
-      '</div>' +
-    '</div>' +
-    '<span id="loading_msg"></span>' +
+ let loaderHtml = '<div id="bowl_ringG">' +
+  '<div class="ball_holderG">' +
+   '<div class="ballG">' +
+   '</div>' +
+  '</div>' +
+  '<span id="loading_msg"></span>' +
   '</div>'
 
   let wrapper = document.getElementById('wrapper')

@@ -1,0 +1,41 @@
+
+/*------ for Redmine Banner ---------*/
+div.banner_info {
+  border-color: white;
+  background-image: none !important;
+  padding-left: 26px;
+  border: none !important;
+  border-left: solid 20px #39c0e952 !important;
+}
+
+div.banner_warn {
+  border-color: white;
+  background-color: #fbfbbe !important;
+  background-image: none !important;
+  padding-left: 26px;
+  border: none !important;
+  border-left: solid 20px #fadd95 !important;
+}
+
+div.banner_alert {
+  border-color: white;
+  background-color: #ffeded !important;
+  background-image: none !important;
+  padding-left: 26px;
+  border: none !important;
+  border-left: solid 20px #fe9292 !important;
+}
+
+div.banner_nodata {
+  text-align: center;
+  border-color: white;
+  background-color: #FFEBC1;
+  color: #A6750C;
+  border: none !important;
+  outline: 2px dashed #f3c9c980;
+  outline-offset: -5px;
+}
+
+#admin-menu a.redmine-banner {
+  background-image: none !important;
+}
