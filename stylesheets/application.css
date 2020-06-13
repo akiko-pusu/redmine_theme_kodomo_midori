@@ -9,6 +9,7 @@ body {
   font-family: var(--font-family);
   font-size: 20px;
   color: rgb(1, 55, 36);
+  background-color: #ffffff !important;
 }
 
 h1,
@@ -22,7 +23,6 @@ h4 {
 
 h2 {
   padding: 10px;
-  background-color: #fff;
   border-bottom: 2px dashed rgba(81, 158, 11, 0.26);
   position: initial;
   padding-left: 0px;
@@ -34,8 +34,24 @@ h2:before {
   top: 0px;
   content: "";
   font-size: 0.8em;
-  padding: 0 0.8em 0 0.2em;
+  padding: 0 0.8em 0 0.6em;
   background: #4caf50;
+  color: #fff;
+  height: 1em;
+  width: 0.8em;
+  text-align: center;
+  border-radius: 80% 3%;
+  margin-right: 10px;
+}
+
+h3:before {
+  position: relative;
+  left: 5px;
+  top: 0px;
+  content: "";
+  font-size: 0.6em;
+  padding: 0 0.8em 0 0.6em;
+  background: #b0e786;
   color: #fff;
   height: 1em;
   width: 0.8em;
@@ -56,35 +72,31 @@ body.controller-admin.action-index #header {
   border-bottom: none;
 }
 
-body.controller-admin.action-index div#content > h2 {
+body.controller-admin.action-index div#content>h2 {
   padding: 10px;
   background-color: white;
-  background-image: linear-gradient(
-      90deg,
+  background-image: linear-gradient(90deg,
       rgba(223, 242, 182, 0.55) 50%,
-      transparent 50%
-    ),
+      transparent 50%),
     linear-gradient(rgba(146, 209, 138, 0.19) 50%, transparent 20%);
   background-size: 20px 20px;
   border-left-color: #0cc184;
   border: none;
 }
 
-body.controller-welcome.action-index div#content > h2 {
+body.controller-welcome.action-index div#content>h2 {
   padding: 10px;
   background-color: white;
-  background-image: linear-gradient(
-      90deg,
+  background-image: linear-gradient(90deg,
       rgba(223, 242, 182, 0.55) 50%,
-      transparent 50%
-    ),
+      transparent 50%),
     linear-gradient(rgba(146, 209, 138, 0.19) 50%, transparent 20%);
   background-size: 20px 20px;
   border-left-color: #0cc184;
   border: none;
 }
 
-body.controller-welcome.action-index div#content div.splitcontentleft > .wiki {
+body.controller-welcome.action-index div#content div.splitcontentleft>.wiki {
   border-radius: 6px;
   position: relative;
   background: #ebf6e9;
@@ -102,6 +114,19 @@ body.controller-welcome.action-index div#content .wiki p {
   padding: 0;
 }
 
+body.controller-projects.action-show div#content div.splitcontentleft {
+  margin-right: 10px;
+}
+
+body.controller-projects.action-show div#content div.splitcontentleft>.wiki {
+  border-radius: 6px;
+  position: relative;
+  background: #ebf6e9;
+  outline: 2px dashed rgb(163, 185, 178);
+  outline-offset: -5px;
+  padding: 0.2em 1em;
+}
+
 pre,
 code {
   font-family: var(--font-family-t);
@@ -109,8 +134,7 @@ code {
 
 pre,
 code {
-  background-image: repeating-linear-gradient(
-      to bottom,
+  background-image: repeating-linear-gradient(to bottom,
       transparent 22px,
       rgba(153, 153, 153, 0.15) 23px,
       rgba(153, 153, 153, 0.15) 23px,
@@ -129,10 +153,8 @@ code {
       transparent 93px,
       transparent 114px,
       rgba(153, 153, 153, 0) 115px,
-      rgba(153, 153, 153, 0) 115px
-    ),
-    repeating-linear-gradient(
-      to right,
+      rgba(153, 153, 153, 0) 115px),
+    repeating-linear-gradient(to right,
       transparent 22px,
       rgba(153, 153, 153, 0.15) 23px,
       rgba(153, 153, 153, 0.15) 23px,
@@ -151,8 +173,7 @@ code {
       transparent 93px,
       transparent 114px,
       rgba(153, 153, 153, 0) 115px,
-      rgba(153, 153, 153, 0) 115px
-    );
+      rgba(153, 153, 153, 0) 115px);
 }
 
 .syntaxhl {
@@ -171,12 +192,12 @@ a:visited {
   height: 24px;
 }
 
-.gantt_subjects_container > .gantt_hdr:first-child {
+.gantt_subjects_container>.gantt_hdr:first-child {
   background: #f3f7d9 !important;
   height: 36px !important;
 }
 
-#gantt_area > .gantt_hdr:first-child {
+#gantt_area>.gantt_hdr:first-child {
   background: #f3f7d9 !important;
 }
 
@@ -215,7 +236,7 @@ div#issue-changesets div.changeset {
   display: none;
 }
 
-div#issue-changesets > h3 {
+div#issue-changesets>h3 {
   background: linear-gradient(transparent 60%, #ffe5667d 60%);
 }
 
@@ -246,6 +267,10 @@ body.controller-issues.action-show div#content {
   text-align: 60px;
   line-height: 80px;
   font-size: 28pt;
+}
+
+#header a {
+  color: #912828;
 }
 
 #top-menu {
@@ -280,6 +305,10 @@ body.controller-issues.action-show div#content {
   background: #f3f7d9;
 }
 
+#sidebar {
+  background: #f0f9e3;
+}
+
 #sidebar ul {
   padding: 0;
   width: 370px;
@@ -292,7 +321,7 @@ body.controller-issues.action-show div#content {
   margin-bottom: 5px;
   font-size: 15px;
   font-weight: bold;
-  border-bottom: 1px dashed rgba(250, 185, 129, 0.4);
+  border-bottom: 2px dashed rgba(169, 214, 189, 0.6);
 }
 
 #sidebar ul li:after,
@@ -399,12 +428,12 @@ div.box p label::before {
   font-size: 18px;
 }
 
-#quick-search > form > label > a {
+#quick-search>form>label>a {
   color: #820505;
   position: relative;
 }
 
-#quick-search > form > label > a:before {
+#quick-search>form>label>a:before {
   position: absolute;
   left: -20px;
   top: 8px;
@@ -420,16 +449,16 @@ div.box p label::before {
   border-radius: 80% 3%;
 }
 
-div#admin-index > div#admin-menu {
+div#admin-index>div#admin-menu {
   margin: 0 auto;
   width: 80%;
 }
 
-div#admin-index > #admin-menu ul {
+div#admin-index>#admin-menu ul {
   padding-left: 30px;
 }
 
-div#admin-index > #admin-menu li {
+div#admin-index>#admin-menu li {
   display: block;
   float: left;
   background: #e4f4cd;
@@ -441,16 +470,16 @@ div#admin-index > #admin-menu li {
   position: relative;
 }
 
-div#admin-index > #admin-menu a.selected {
+div#admin-index>#admin-menu a.selected {
   background-color: transparent;
   color: #820505;
 }
 
-div#admin-index > #admin-menu li a[class*="icon-"] {
+div#admin-index>#admin-menu li a[class*="icon-"] {
   background-image: none;
 }
 
-div#admin-index > #admin-menu li a.icon::before {
+div#admin-index>#admin-menu li a.icon::before {
   content: "＊";
   color: rgb(255, 255, 255);
   display: inline-block;
@@ -466,15 +495,15 @@ div#admin-index > #admin-menu li a.icon::before {
   -o-transform: rotate(20deg);
 }
 
-div#admin-index > #admin-menu li a.icon:hover::before {
+div#admin-index>#admin-menu li a.icon:hover::before {
   color: rgb(253, 231, 30);
 }
 
-div#admin-index > #admin-menu li a.icon:hover {
+div#admin-index>#admin-menu li a.icon:hover {
   background-color: transparent;
 }
 
-div#admin-index > #admin-menu li:hover {
+div#admin-index>#admin-menu li:hover {
   background: ivory;
 }
 
@@ -582,6 +611,26 @@ div#admin-index > #admin-menu li:hover {
   border-left: 1px solid #c6ad35;
 }
 
+table.list {
+  border-collapse: collapse;
+}
+
+table.list tbody>tr {
+  border-bottom: 1px solid #b3c8746e;
+}
+
+table.list thead>tr {
+  border-top: #b3c874bf;
+  border-top-style: solid;
+  border-width: 3px;
+}
+
+table.list tbody>tr:last-child {
+  border-bottom: #b3c874bf;
+  border-bottom-style: solid;
+  border-width: 3px;
+}
+
 table.list:not(.odd-even) tbody tr:nth-child(even),
 .even {
   background-color: #fffbe1;
@@ -594,18 +643,10 @@ table.list:not(.odd-even) tbody tr:nth-child(odd),
 
 table.list th,
 .table-list-header {
-  background-color: #daef90;
+  background-color: #d1edbc;
 }
 
-table.list {
-  border-style: none;
-}
-
-table.list tr {
-  border-bottom: 1px dashed #efe7be;
-}
-
-#content > div.splitcontent {
+#content>div.splitcontent {
   font-size: 16px;
 }
 
@@ -614,7 +655,7 @@ table.list tr {
   border: none;
 }
 
-#history > h3::before {
+#history>h3::before {
   content: "";
   font-size: 0.8em;
   padding: 0 0.8em 0 0.2em;
@@ -643,12 +684,6 @@ div[id^="change-"]:nth-of-type(odd) {
   margin-right: 30px;
 }
 
-.avatars-off h4.note-header::before {
-  content: "┥";
-  font-size: 12pt;
-  top: 6px;
-}
-
 div.wiki,
 div.value {
   color: rgb(36, 2, 2);
@@ -662,7 +697,7 @@ div.issue div.description {
   border-radius: 6px;
 }
 
-div.issue > div.description > p > strong {
+div.issue>div.description>p>strong {
   position: relative;
   color: #832929;
   padding: 0.5em 1em 0.5em 2em;
@@ -670,7 +705,7 @@ div.issue > div.description > p > strong {
   border-radius: 0.5em;
 }
 
-div.issue > div.description > p > strong::after {
+div.issue>div.description>p>strong::after {
   position: absolute;
   top: 50%;
   left: 1em;
@@ -686,13 +721,11 @@ div.description div.wiki {
   background-color: white;
   border-radius: 2px;
   padding-left: 4px;
-  background-image: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0) 97%,
-    #ddd 97%,
-    #ddd 100%
-  );
+  background-image: linear-gradient(180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 97%,
+      #ddd 97%,
+      #ddd 100%);
   background-size: 100% 1.8em;
   line-height: 1.8;
 }
@@ -796,7 +829,7 @@ article.news-article h3 {
   padding-bottom: 10px;
 }
 
-body.controller-news.action-show div#content > div.wiki {
+body.controller-news.action-show div#content>div.wiki {
   border-radius: 0px;
   position: relative;
   background: #fdfaf3;
@@ -807,7 +840,7 @@ body.controller-news.action-show div#content > div.wiki {
   width: 90%;
 }
 
-body.controller-news.action-show div#content > div.wiki::before {
+body.controller-news.action-show div#content>div.wiki::before {
   position: absolute;
   top: 0.3em;
   right: -2%;
@@ -826,26 +859,26 @@ body.controller-news.action-show div#content > div.wiki::before {
   transform: rotate(12deg);
 }
 
-div#comments > div.wiki {
+div#comments>div.wiki {
   border-bottom: 1px dashed rgb(183, 182, 181);
   margin-bottom: 10px;
   padding: 8px;
 }
 
-div#comments > h4:nth-of-type(odd) {
+div#comments>h4:nth-of-type(odd) {
   margin-right: 30px;
 }
 
-div#comments > h4:nth-of-type(odd) + div.wiki {
+div#comments>h4:nth-of-type(odd)+div.wiki {
   background-color: #f3f7d9;
   margin-right: 30px;
 }
 
-div#comments > h4:nth-of-type(even) {
+div#comments>h4:nth-of-type(even) {
   margin-left: 30px;
 }
 
-div#comments > h4:nth-of-type(even) + div.wiki {
+div#comments>h4:nth-of-type(even)+div.wiki {
   background-color: #fdfbfb;
   margin-left: 30px;
 }
@@ -856,7 +889,7 @@ body.controller-messages.action-show div#content {
   padding-left: 20px;
 }
 
-div#content > div.message > div.wiki {
+div#content>div.message>div.wiki {
   font-size: 1.1em;
   position: relative;
   padding-left: 10px;
@@ -869,28 +902,28 @@ div#content > div.message > div.wiki {
   box-shadow: 4px 4px 4px #55555578, 2px 2px 2px 2px rgba(0, 0, 0, 0.3) inset;
 }
 
-div#content > div.message > div.wiki::before,
-div#content > div.message > div.wiki::after {
+div#content>div.message>div.wiki::before,
+div#content>div.message>div.wiki::after {
   position: absolute;
   content: "";
   bottom: 0;
 }
 
-div#content > div.message > div.wiki::before {
+div#content>div.message>div.wiki::before {
   width: 20px;
   right: 10px;
   border: solid 3px #ffff00;
   border-radius: 3px 2px 0 2px;
 }
 
-div#content > div.message > div.wiki::after {
+div#content>div.message>div.wiki::after {
   width: 15px;
   right: 45px;
   border: solid 3px #fff;
   border-radius: 8px 5px 2px 5px;
 }
 
-div#content > div.message > div.wiki pre {
+div#content>div.message>div.wiki pre {
   color: initial;
 }
 
@@ -904,11 +937,11 @@ div#replies div.wiki p {
   margin: 2px;
 }
 
-div#replies > div:nth-of-type(odd) {
+div#replies>div:nth-of-type(odd) {
   margin-right: 30px;
 }
 
-div#replies > div:nth-of-type(even) {
+div#replies>div:nth-of-type(even) {
   margin-left: 30px;
   margin-right: 30px;
 }
@@ -982,7 +1015,6 @@ input[type="submit"] {
   font-family: var(--font-family-t);
   font-size: 12pt;
   display: inline-block;
-  /* padding: 0.5em 0.5em; */
   background: #009d73;
   color: #fff;
   border-radius: 2px;
@@ -990,6 +1022,8 @@ input[type="submit"] {
   border: dashed 2px #fff;
   margin-right: 8px;
   min-width: 100px;
+  margin-left: 4px;
+  margin-bottom: 6px;
 }
 
 input[name="commit"]:hover,
@@ -1033,7 +1067,7 @@ select.expandable {
   margin-bottom: 0;
 }
 
-div#query_form_content > fieldset {
+div#query_form_content>fieldset {
   border: 1px solid #e4e4e4;
   margin-bottom: 4px;
   padding-top: 4px;
@@ -1113,7 +1147,7 @@ a.journal-link:after {
   border-bottom: 10px solid transparent;
 }
 
-#history div:target > h4 {
+#history div:target>h4 {
   background-color: #dce77e;
   border-bottom: none;
 }
@@ -1126,20 +1160,16 @@ a.journal-link:after {
   padding: 5px;
   text-align: center;
   background: #76ccc0;
-  background-image: repeating-linear-gradient(
-      44deg,
+  background-image: repeating-linear-gradient(44deg,
       rgba(153, 255, 204, 0.41),
       rgba(153, 255, 204, 0.41) 22px,
       rgba(0, 0, 0, 0) 0,
-      rgba(0, 0, 0, 0) 44px
-    ),
-    repeating-linear-gradient(
-      134deg,
+      rgba(0, 0, 0, 0) 44px),
+    repeating-linear-gradient(134deg,
       rgba(0, 179, 179, 0.5),
       rgba(0, 179, 179, 0.5) 22px,
       rgba(0, 0, 0, 0) 0,
-      rgba(0, 0, 0, 0) 44px
-    );
+      rgba(0, 0, 0, 0) 44px);
 }
 
 img.gravatar {
@@ -1162,13 +1192,7 @@ div#activity h3 {
 }
 
 div#activity h3::before {
-  content: "";
-  background: white;
-  color: #fff;
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-  margin-right: 4px;
+  display: none;
 }
 
 div#activity h3 {
@@ -1192,12 +1216,12 @@ div#activity h3::after {
   border-radius: 100%;
 }
 
-div#activity > dl > dt:hover {
+div#activity>dl>dt:hover {
   color: darkorange;
   text-decoration: darkorange;
 }
 
-div#activity > dl dd:hover {
+div#activity>dl dd:hover {
   border-bottom: 2px dashed rgb(186, 220, 210);
 }
 
@@ -1230,7 +1254,11 @@ p.nodata {
   outline-offset: -5px;
 }
 
-div.splitcontentleft > ul {
+div.splitcontentleft {
+  margin-left: 5px;
+}
+
+div.splitcontentleft>ul {
   border-radius: 0px;
   position: relative;
   background: #f3f6e0;
@@ -1316,6 +1344,24 @@ div.splitcontentleft > ul {
   background-size: 50px;
 }
 
+#theme_info .theme_description:after {
+  border-bottom: 2px dotted rgb(176, 210, 186);
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+}
+
+#theme_info .theme_description:before {
+  border-top: 2px dotted rgb(176, 210, 186);
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+}
+
 div.news span.summary {
   color: #82603f;
   margin-left: 10px;
@@ -1327,3 +1373,4 @@ div.news span.summary {
 abbr[title] {
   text-decoration: none;
 }
+
