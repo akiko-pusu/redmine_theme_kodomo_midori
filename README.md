@@ -292,6 +292,12 @@ http://localhost:3000/ にアクセスしてください。
 
 ## ChangeLog
 
+- 0.0.9
+  - Update ruby version to 2.6 and update Redmine version to 4.1-stable.
+  - Enabled to show theme information with Redmine4.1.
+  - Add transform effect for gravar image.
+  - Change flash message style. Change modal header of jQuery UI.
+  - Change to use woff2 as primary.
 - 0.0.8
   - Update README
   - Apply some settings for build / deploy to Heroku demo site.
