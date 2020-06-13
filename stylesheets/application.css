@@ -1382,3 +1382,62 @@ abbr[title] {
   text-decoration: none;
 }
 
+/*------ Flash style setting --------*/
+div.flash.notice {
+  background-color: #dfffdf;
+  overflow: hidden;
+  padding: 10px;
+  padding-left: 30px;
+  background-image: none;
+  position: relative;
+  border: none;
+  border-left: solid 20px #97f0c2 !important;
+}
+
+div.flash.notice:before {
+  background-color: #fff;
+  border-radius: 50%;
+  content: '';
+  display: block;
+  opacity: 0.7;
+  position: absolute;
+  top: -20px;
+  right: 100px;
+  width: 200px;
+  height: 200px;
+}
+
+div.flash.error,
+#errorExplanation {
+  overflow: hidden;
+  padding: 10px;
+  padding-left: 30px;
+  background-image: none;
+  position: relative;
+  border: none;
+  border-left: solid 20px #f78484 !important;
+}
+
+div.flash.error:before,
+#errorExplanation:before {
+  background-color: #fff;
+  border-radius: 50%;
+  content: '';
+  display: block;
+  opacity: 0.7;
+  position: absolute;
+  top: -20px;
+  right: 100px;
+  width: 200px;
+  height: 200px;
+}
+
+/*------ Flash style setting --------*/
+
+/*------ JQuery UI ------------------*/
+.ui-widget-header {
+  background: #96d4a4;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+}
