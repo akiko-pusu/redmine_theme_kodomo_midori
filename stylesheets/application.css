@@ -1180,6 +1180,14 @@ img.gravatar {
   margin: 2px;
 }
 
+img.gravatar:hover {
+  transform: scale(1.6, 1.6);
+}
+
+div.journal h4 img.gravatar {
+  margin-left: -24px;
+}
+
 div#activity dl {
   border-left: 2px dotted rgb(184, 207, 206);
   padding-left: 9px;
