@@ -72,10 +72,13 @@ async function waitAction (event) {
 }
 
 const setThemeInfo = () => {
-  let footer = document.querySelector('div.bgr')
+  let footer = document.querySelector('div.bgr') ? document.querySelector('div.bgr') : document.querySelector('div#footer')
   if (footer) {
     let infoText = ''
-    if (document.body.classList.contains('controller-account') || document.body.classList.contains('controller-welcome')) {
+    const classList = document.body.classList
+    if (classList.contains('controller-account') ||
+        classList.contains('controller-welcome') ||
+        (classList.contains('controller-admin') && classList.contains('action-info'))) {
       infoText = '<div class="theme_description"><pre>'
       for (let key in themeInfo) {
         infoText = infoText + key + ' : ' + themeInfo[key] + '\n'
@@ -84,7 +87,13 @@ const setThemeInfo = () => {
     }
 
     let beforeText = '/ Theme: <span id="theme_info">Kodomo Redmine green' + infoText + '</span> version'
-    footer.insertAdjacentHTML('beforeend', beforeText)
+    footer.innerHTML += beforeText
+
+    // hide Wiki
+    let wiki = document.querySelector('body.controller-welcome.action-index div#content div.splitcontentleft > .wiki')
+    if (wiki != undefined && wiki.innerText === '') {
+      wiki.setAttribute('style', 'display: none;')
+    }
   }
 }
 

@@ -5,14 +5,14 @@
 /* kiroji */
 @font-face {
   font-family: kiroji;
-  src: url("../font/kiloji/kiloji.woff") format("woff2"),
+  src: url("../font/kiloji/kiloji.woff2") format("woff2"),
     url("../font/kiloji/kiloji.woff") format("woff")
 }
 
 /* kiroji */
 @font-face {
   font-family: kiroji_b;
-  src: url("../font/kiloji/kiloji_b.woff") format("woff2"),
+  src: url("../font/kiloji/kiloji_b.woff2") format("woff2"),
     url("../font/kiloji/kiloji_b.woff") format("woff");
 }
 
