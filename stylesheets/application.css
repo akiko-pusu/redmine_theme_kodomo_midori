@@ -382,7 +382,7 @@ div.box:after {
   box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
-div.box p label::before {
+div.box p > label::before {
   content: "";
   font-size: 0.8em;
 
