@@ -726,6 +726,10 @@ div.issue>div.description>p>strong::after {
   position: absolute;
   top: 50%;
   left: 1em;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   content: "";
   width: 13px;
@@ -819,6 +823,10 @@ article.news-article div.wiki::before {
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
   padding: 0.25em 2em;
   color: #65513f;
+  -moz-transform: rotate(12deg);
+  -webkit-transform: rotate(12deg);
+  -o-transform: rotate(12deg);
+  -ms-transform: rotate(12deg);
   transform: rotate(12deg);
 }
 
@@ -873,6 +881,10 @@ body.controller-news.action-show div#content>div.wiki::before {
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
   padding: 0.25em 2em;
   color: #65513f;
+  -moz-transform: rotate(12deg);
+  -webkit-transform: rotate(12deg);
+  -o-transform: rotate(12deg);
+  -ms-transform: rotate(12deg);
   transform: rotate(12deg);
 }
 
@@ -1142,7 +1154,10 @@ form#issue-form fieldset {
   background: rgba(57, 195, 212, 0.5);
   color: #fff;
   letter-spacing: 0.05em;
+  -moz-transform: rotate(-40deg);
   -webkit-transform: rotate(-40deg);
+  -o-transform: rotate(-40deg);
+  -ms-transform: rotate(-40deg);
   transform: rotate(-40deg);
   box-shadow: 0 0 0 2px rgba(57, 195, 212, 0.5);
   border-top: dashed 2px rgba(255, 255, 255, 0.65);
@@ -1210,6 +1225,10 @@ img.gravatar {
 }
 
 img.gravatar:hover {
+  -moz-transform: scale(1.6, 1.6);
+  -webkit-transform: scale(1.6, 1.6);
+  -o-transform: scale(1.6, 1.6);
+  -ms-transform: scale(1.6, 1.6);
   transform: scale(1.6, 1.6);
 }
 
@@ -1245,6 +1264,10 @@ div#activity h3::after {
   position: absolute;
   top: 50%;
   left: 1em;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   content: "";
   width: 13px;
