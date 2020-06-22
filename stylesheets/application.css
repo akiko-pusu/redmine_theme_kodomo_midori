@@ -382,7 +382,7 @@ div.box:after {
   box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
-div.box p label::before {
+div.box p > label::before {
   content: "";
   font-size: 0.8em;
 
@@ -1435,6 +1435,16 @@ div.flash.error:before,
 /*------ Flash style setting --------*/
 
 /*------ JQuery UI ------------------*/
+
+.ui-widget {
+  font-family: var(--font-family);
+}
+
+.ui-widget select {
+  font-family: var(--font-family);
+  font-size: 0.8em;
+}
+
 .ui-widget-header {
   background: #96d4a4;
   color: #fff;
