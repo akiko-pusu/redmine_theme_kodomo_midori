@@ -324,6 +324,7 @@ body.controller-issues.action-show div#content {
 
 #sidebar {
   background: #f0f9e3;
+  border-style: none;
 }
 
 #sidebar ul {
@@ -1119,7 +1120,9 @@ div#query_form_content>fieldset {
 }
 
 fieldset {
-  border-radius: 4px;
+  border-radius: 6px;
+  background: #fffdfc;
+  border: none;
 }
 
 form#issue-form fieldset {
@@ -1371,7 +1374,7 @@ div.splitcontentleft>ul {
   background: #def2cf;
 }
 
-
+/*---- Style for elements that appended by JavaScript ----*/
 #theme_info {
   position: relative;
   color: #217f66;
