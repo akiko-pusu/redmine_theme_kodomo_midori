@@ -30,10 +30,10 @@ const displayChangeSets = () => {
 
   for (let i = 0; i < changeSets.length; i++) {
     let changeSet = changeSets[i]
-    if　(changeSet.style.display == "block") {
-      changeSet.style.display ="none"
+    if (changeSet.style.display == 'block') {
+      changeSet.style.display = 'none'
     } else {
-      changeSet.style.display = "block"
+      changeSet.style.display = 'block'
     }
   }
 }
@@ -137,7 +137,7 @@ const setLoadingHtml = () => {
   `
   */
 
- let loaderHtml = '<div id="bowl_ringG">' +
+  let loaderHtml = '<div id="bowl_ringG">' +
   '<div class="ball_holderG">' +
    '<div class="ballG">' +
    '</div>' +
@@ -151,9 +151,74 @@ const setLoadingHtml = () => {
   }
 }
 
+const projectMembersList = () => {
+  if (document.body.classList.contains('controller-projects') && document.body.classList.contains('action-show')) {
+    const trigger = document.querySelector('div.members.box > h3.icon.icon-group')
+    if (trigger) {
+      trigger.addEventListener('click', displayStaffRole, false)
+    }
+  }
+}
+
+async function displayStaffRole () {
+  let wrapper = document.createElement('div')
+  wrapper.setAttribute('class', 'staff_role_wrapper')
+
+  let main = document.createElement('div')
+  main.setAttribute('class', 'staff_role_main')
+
+  let panel = document.createElement('div')
+  panel.setAttribute('class', 'staff_role')
+
+  let projectName = document.querySelector('span.current-project').textContent
+  let project = document.createElement('div')
+  project.setAttribute('class', 'project')
+  project.innerHTML = projectName
+  panel.appendChild(project)
+
+  let members = document.querySelectorAll('div.members p')
+  let membersByRole = Array.from(members).map(member => member.innerText)
+  for (let i = 0; i < membersByRole.length; i++) {
+    let [ roleName, users ] = membersByRole[i].split(': ')
+    let userList = users.split(',')
+
+    for (let m = 0; m < userList.length; m++) {
+      let roleEntry = document.createElement('div')
+      roleEntry.setAttribute('class', 'role_name')
+      roleEntry.innerHTML = roleName
+
+      let content = document.createElement('div')
+      content.setAttribute('class', 'name')
+      content.innerHTML = userList[m]
+
+      panel.appendChild(roleEntry)
+      panel.appendChild(content)
+    }
+  }
+
+  let info = document.createElement('div')
+  info.setAttribute('class', 'staff_role_info')
+  info.innerText = 'Enjoy our project!'
+
+  main.appendChild(panel)
+  wrapper.appendChild(main)
+  wrapper.appendChild(info)
+  document.getElementById('wrapper').setAttribute('style', 'opacity: 0.4;')
+  document.body.appendChild(wrapper)
+
+  wrapper.addEventListener('click', function () {
+    wrapper.parentNode.removeChild(wrapper)
+    document.getElementById('wrapper').setAttribute('style', 'opacity: 1;')
+  })
+
+  await sleep(60000)
+  wrapper.click()
+}
+
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', setThemeInfo)
   document.addEventListener('DOMContentLoaded', setCloseRibbon)
   document.addEventListener('DOMContentLoaded', setLoading)
   document.addEventListener('DOMContentLoaded', setIssueStyle)
+  document.addEventListener('DOMContentLoaded', projectMembersList)
 }
