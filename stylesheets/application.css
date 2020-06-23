@@ -1087,6 +1087,10 @@ input[name="continue"] {
   min-width: 100px;
 }
 
+input[name="commit"]:focus, input[type="submit"]:focus {
+  outline-style: none;
+}
+
 table.list td {
   padding: 4px;
 }
