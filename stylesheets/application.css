@@ -44,6 +44,23 @@ h2:before {
   margin-right: 10px;
 }
 
+/*----- h2 element at Issue show: tracker and status label ------*/
+h2.inline-flex:before {
+  position: relative;
+  left: 5px;
+  top: 4px;
+  content: "";
+  font-size: 0.8em;
+  padding: 0 0.8em 0 0.2em;
+  background: #4caf50;
+  color: #fff;
+  height: 1.4em;
+  width: 0.4em;
+  text-align: center;
+  border-radius: 80% 3%;
+  margin-right: 10px;
+}
+
 h3:before {
   position: relative;
   left: 5px;
@@ -307,6 +324,7 @@ body.controller-issues.action-show div#content {
 
 #sidebar {
   background: #f0f9e3;
+  border-style: none;
 }
 
 #sidebar ul {
@@ -709,6 +727,10 @@ div.issue>div.description>p>strong::after {
   position: absolute;
   top: 50%;
   left: 1em;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   content: "";
   width: 13px;
@@ -802,6 +824,10 @@ article.news-article div.wiki::before {
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
   padding: 0.25em 2em;
   color: #65513f;
+  -moz-transform: rotate(12deg);
+  -webkit-transform: rotate(12deg);
+  -o-transform: rotate(12deg);
+  -ms-transform: rotate(12deg);
   transform: rotate(12deg);
 }
 
@@ -856,6 +882,10 @@ body.controller-news.action-show div#content>div.wiki::before {
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
   padding: 0.25em 2em;
   color: #65513f;
+  -moz-transform: rotate(12deg);
+  -webkit-transform: rotate(12deg);
+  -o-transform: rotate(12deg);
+  -ms-transform: rotate(12deg);
   transform: rotate(12deg);
 }
 
@@ -973,13 +1003,25 @@ div.issue p.author {
 }
 
 a[class*="icon-"]:hover {
-  transform: scale(1.3, 1.3);
-}
-
-a.icon:hover {
+  display: inline-block;
   color: rgb(118, 2, 2);
   background-color: #fef0ac;
-  font-size: 1.1em;
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition : all 0.5s ease 0s;
+}
+
+#content>.contextual>a, #content>.contextual a[class*="icon-"] {
+  display: inline-block;
+  padding: 6px;
+  padding-left: 22px;
+  border: 1px solid #f0eeee;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-position-x: 4px;
 }
 
 /*----- form --------*/
@@ -1078,7 +1120,9 @@ div#query_form_content>fieldset {
 }
 
 fieldset {
-  border-radius: 4px;
+  border-radius: 6px;
+  background: #fffdfc;
+  border: none;
 }
 
 form#issue-form fieldset {
@@ -1113,7 +1157,10 @@ form#issue-form fieldset {
   background: rgba(57, 195, 212, 0.5);
   color: #fff;
   letter-spacing: 0.05em;
+  -moz-transform: rotate(-40deg);
   -webkit-transform: rotate(-40deg);
+  -o-transform: rotate(-40deg);
+  -ms-transform: rotate(-40deg);
   transform: rotate(-40deg);
   box-shadow: 0 0 0 2px rgba(57, 195, 212, 0.5);
   border-top: dashed 2px rgba(255, 255, 255, 0.65);
@@ -1181,6 +1228,10 @@ img.gravatar {
 }
 
 img.gravatar:hover {
+  -moz-transform: scale(1.6, 1.6);
+  -webkit-transform: scale(1.6, 1.6);
+  -o-transform: scale(1.6, 1.6);
+  -ms-transform: scale(1.6, 1.6);
   transform: scale(1.6, 1.6);
 }
 
@@ -1216,6 +1267,10 @@ div#activity h3::after {
   position: absolute;
   top: 50%;
   left: 1em;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   content: "";
   width: 13px;
@@ -1319,7 +1374,7 @@ div.splitcontentleft>ul {
   background: #def2cf;
 }
 
-
+/*---- Style for elements that appended by JavaScript ----*/
 #theme_info {
   position: relative;
   color: #217f66;
@@ -1451,3 +1506,21 @@ div.flash.error:before,
   font-weight: bold;
   border: none;
 }
+
+/*---- Issue Badge -------*/
+span[class*="badge"] {
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+  padding-left: 6px;
+  padding-right: 8px;
+}
+
+span[class*='badge-status-'] {
+  background-color: #d6faa9;
+}
+
+#issue_is_private_wrap {
+  display: inline-flex;
+}
+/*---- Issue Badge -------*/

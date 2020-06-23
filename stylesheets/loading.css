@@ -143,6 +143,10 @@
   top: 0;
   left: 50%;
   margin-right: -50%;
+  -moz-transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%, 0%);
+  -o-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
   transform: translate(-50%, 0%);
 
   border-left: dotted 2px #c6ded0;
