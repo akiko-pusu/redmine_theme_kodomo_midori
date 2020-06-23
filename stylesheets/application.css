@@ -1228,11 +1228,12 @@ img.gravatar {
 }
 
 img.gravatar:hover {
-  -moz-transform: scale(1.6, 1.6);
-  -webkit-transform: scale(1.6, 1.6);
-  -o-transform: scale(1.6, 1.6);
-  -ms-transform: scale(1.6, 1.6);
-  transform: scale(1.6, 1.6);
+  -moz-transform: scale(1.4, 1.4);
+  -webkit-transform: scale(1.4, 1.4);
+  -o-transform: scale(1.4, 1.4);
+  -ms-transform: scale(1.4, 1.4);
+  transform: scale(1.4, 1.4);
+  transition : all 0.5s ease 0s;
 }
 
 div.journal h4 img.gravatar {
