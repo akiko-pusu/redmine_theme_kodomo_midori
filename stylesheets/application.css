@@ -204,10 +204,36 @@ a:visited {
   text-decoration: none;
 }
 
+/*--------- Project Jump form -----------*/
 #project-jump .drdn-trigger {
   font-size: 10pt;
   height: 24px;
 }
+
+#project-jump .drdn-items > a:hover {
+  background-color: #79c5bb;
+  color: #fff !important;
+  border: none;
+}
+
+.drdn-content {
+  border: 6px solid #cfdfdc8f;
+  border-radius: 6px;
+}
+
+.drdn-content .autocomplete:focus {
+  border-color: #cfdfdc8f;
+}
+
+.drdn-content strong {
+  background-color: #cfdfdc8f;
+  border: none;
+}
+
+div + .drdn-items {
+  border-top: 1px solid #cfdfdc8f;
+}
+/*--------- Project Jump form -----------*/
 
 .gantt_subjects_container>.gantt_hdr:first-child {
   background: #f3f7d9 !important;
@@ -1089,6 +1115,10 @@ input[name="continue"] {
 
 input[name="commit"]:focus, input[type="submit"]:focus {
   outline-style: none;
+}
+
+a:focus {
+  outline-color: #cfdfdc8f;
 }
 
 table.list td {
