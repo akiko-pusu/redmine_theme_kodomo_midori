@@ -297,7 +297,7 @@ http://localhost:3000/ にアクセスしてください。
   - Apply theme font for ui-widget class. (Isue: #18)
   - Add link to the theme repository. (Issue: #19 / Thanks, Go Maeda!)
   - Apply style for issue badge. (status, private)
-  - Add staff role feature.
+  - Add staff roll feature.
   - Change hover effect. (Resize icon elements more smoothly.)
   - Apply styles for project pulldown, context menu.
 - 0.0.9
