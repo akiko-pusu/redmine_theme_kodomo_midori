@@ -188,12 +188,17 @@ div.staff_role .name {
 
 div.staff_role_wrapper .staff_role_info {
   position: relative;
-  font-size: 60px;
+  font-size: 80px;
   text-align: center;
   bottom: 200px;
-  animation: fadeIn 20s linear 10s 1 normal;
-  -webkit-animation: fadeIn 20s linear 10s 1 normal;
-  color: #6fc4ae;
+  -webkit-animation: fadeIn 15s forwards 0s infinite alternate;
+  animation-name: fadeIn;
+  animation-duration: 15s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: #6fc4ad3c;
   opacity: 0;
 }
 
@@ -207,11 +212,11 @@ div.staff_role_wrapper .staff_role_info {
 }
 
 @keyframes fadeIn {
-  0% {opacity: 0}
-  100% {opacity: 1}
+  0% { opacity: 0 }
+  100% { opacity: 1 }
 }
 
 @-webkit-keyframes fadeIn {
-  0% {opacity: 0}
-  100% {opacity: 1}
+  0% { opacity: 0 }
+  100% { opacity: 1}
 }
