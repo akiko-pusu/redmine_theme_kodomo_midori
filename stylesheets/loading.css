@@ -137,6 +137,7 @@
 .staff_role_main {
   overflow: hidden;
   width: 60%;
+  min-width: 400px;
   height: 100%;
   text-align: center;
   position: relative;
@@ -162,12 +163,12 @@
   position: absolute;
   top: 100%;
   left: 50%;
-  width: 400px;
   margin-left: -200px;
   font: 300 30px/1 var(--font-family);
   text-align: center;
   text-transform: uppercase;
   color: rgb(32, 101, 90);
+  -webkit-animation: 60s credits linear infinite;
   animation: 60s credits linear infinite;
 }
 
@@ -191,9 +192,9 @@ div.staff_role_wrapper .staff_role_info {
   font-size: 60px;
   text-align: center;
   bottom: 200px;
-  animation: fadeIn 20s linear 10s 1 normal;
-  -webkit-animation: fadeIn 20s linear 10s 1 normal;
-  color: #6fc4ae;
+  -webkit-animation: fadeIn 15s forwards 0s infinite alternate;
+  animation: fadeIn 15s forwards 0s infinite alternate;
+  color: #6fc4ad3c;
   opacity: 0;
 }
 
@@ -207,11 +208,11 @@ div.staff_role_wrapper .staff_role_info {
 }
 
 @keyframes fadeIn {
-  0% {opacity: 0}
-  100% {opacity: 1}
+  0% { opacity: 0 }
+  100% { opacity: 1 }
 }
 
 @-webkit-keyframes fadeIn {
-  0% {opacity: 0}
-  100% {opacity: 1}
+  0% { opacity: 0 }
+  100% { opacity: 1}
 }

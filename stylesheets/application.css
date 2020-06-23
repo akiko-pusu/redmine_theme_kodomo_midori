@@ -204,10 +204,36 @@ a:visited {
   text-decoration: none;
 }
 
+/*--------- Project Jump form -----------*/
 #project-jump .drdn-trigger {
   font-size: 10pt;
   height: 24px;
 }
+
+#project-jump .drdn-items > a:hover {
+  background-color: #79c5bb;
+  color: #fff !important;
+  border: none;
+}
+
+.drdn-content {
+  border: 6px solid #cfdfdc8f;
+  border-radius: 6px;
+}
+
+.drdn-content .autocomplete:focus {
+  border-color: #cfdfdc8f;
+}
+
+.drdn-content strong {
+  background-color: #cfdfdc8f;
+  border: none;
+}
+
+div + .drdn-items {
+  border-top: 1px solid #cfdfdc8f;
+}
+/*--------- Project Jump form -----------*/
 
 .gantt_subjects_container>.gantt_hdr:first-child {
   background: #f3f7d9 !important;
@@ -1024,6 +1050,18 @@ a[class*="icon-"]:hover {
   background-position-x: 4px;
 }
 
+/*----- context menu ------*/
+.issue.context-menu-selection {
+  background-color: #2e7480 !important;
+  color: #f8f8f8 !important;
+}
+
+.issue.context-menu-selection:hover {
+  background-color: #379e4d !important;
+  color: #f8f8f8 !important;
+}
+/*----- context menu ------*/
+
 /*----- form --------*/
 input[type="text"],
 input[type="password"] {
@@ -1085,6 +1123,14 @@ input[name="continue"] {
   border: dashed 2px #fff;
   margin-right: 8px;
   min-width: 100px;
+}
+
+input[name="commit"]:focus, input[type="submit"]:focus {
+  outline-style: none;
+}
+
+a:focus {
+  outline-color: #cfdfdc8f;
 }
 
 table.list td {
@@ -1228,11 +1274,12 @@ img.gravatar {
 }
 
 img.gravatar:hover {
-  -moz-transform: scale(1.6, 1.6);
-  -webkit-transform: scale(1.6, 1.6);
-  -o-transform: scale(1.6, 1.6);
-  -ms-transform: scale(1.6, 1.6);
-  transform: scale(1.6, 1.6);
+  -moz-transform: scale(1.4, 1.4);
+  -webkit-transform: scale(1.4, 1.4);
+  -o-transform: scale(1.4, 1.4);
+  -ms-transform: scale(1.4, 1.4);
+  transform: scale(1.4, 1.4);
+  transition : all 0.5s ease 0s;
 }
 
 div.journal h4 img.gravatar {
