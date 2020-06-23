@@ -292,6 +292,14 @@ http://localhost:3000/ にアクセスしてください。
 
 ## ChangeLog
 
+- 1.0.0
+  - Update the major version to 1.0.0.
+  - Apply theme font for ui-widget class. (Isue: #18)
+  - Add link to the theme repository. (Issue: #19 / Thanks, Go Maeda!)
+  - Apply style for issue badge. (status, private)
+  - Add staff role feature.
+  - Change hover effect. (Resize icon elements more smoothly.)
+  - Apply styles for project pulldown, context menu.
 - 0.0.9
   - Update ruby version to 2.6 and update Redmine version to 4.1-stable.
   - Enabled to show theme information with Redmine4.1.
