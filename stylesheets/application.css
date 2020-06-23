@@ -1050,6 +1050,18 @@ a[class*="icon-"]:hover {
   background-position-x: 4px;
 }
 
+/*----- context menu ------*/
+.issue.context-menu-selection {
+  background-color: #2e7480 !important;
+  color: #f8f8f8 !important;
+}
+
+.issue.context-menu-selection:hover {
+  background-color: #379e4d !important;
+  color: #f8f8f8 !important;
+}
+/*----- context menu ------*/
+
 /*----- form --------*/
 input[type="text"],
 input[type="password"] {
