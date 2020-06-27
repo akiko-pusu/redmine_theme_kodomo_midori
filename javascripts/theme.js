@@ -8,17 +8,19 @@ const themeInfo = {
 
 // Script to append "Great Job!" message when access the closed issue.
 const setCloseRibbon = () => {
-  const closedIssue = document.querySelector('div#content div.issue.closed')
-  if (closedIssue) {
-    let ribbon = document.createElement('div')
-    ribbon.setAttribute('class', 'ribbon-content')
+  if (document.body.classList.contains('controller-issues') && document.body.classList.contains('action-show')) {
+    const closedIssue = document.querySelector('div#content div.issue.closed')
+    if (closedIssue) {
+      let ribbon = document.createElement('div')
+      ribbon.setAttribute('class', 'ribbon-content')
 
-    let ribbonContent = document.createElement('span')
-    ribbonContent.setAttribute('class', 'ribbon')
-    ribbonContent.innerHTML = '★ Great Job ★'
+      let ribbonContent = document.createElement('span')
+      ribbonContent.setAttribute('class', 'ribbon')
+      ribbonContent.innerHTML = '★ Great Job ★'
 
-    ribbon.appendChild(ribbonContent)
-    document.body.appendChild(ribbon)
+      ribbon.appendChild(ribbonContent)
+      document.body.appendChild(ribbon)
+    }
   }
 }
 
