@@ -163,6 +163,13 @@ const projectMembersList = () => {
   }
 }
 
+const calendarStyleChange = () => {
+  let targetElement = document.querySelector('body.controller-calendars.action-show p.buttons')
+  if (targetElement) {
+    applyCalendarStyle(targetElement)
+  }
+}
+
 async function displayStaffRoll () {
   let wrapper = document.createElement('div')
   wrapper.setAttribute('class', 'staff_roll_wrapper')
@@ -224,4 +231,72 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', setLoading)
   document.addEventListener('DOMContentLoaded', setIssueStyle)
   document.addEventListener('DOMContentLoaded', projectMembersList)
+  document.addEventListener('DOMContentLoaded', calendarStyleChange)
+}
+
+function toggleCalendar(event) {
+  let calendarUl = document.querySelector('ul.list_cal')
+  let calendarTable = document.querySelector('table.cal')
+  console.log('hoge!')
+  if (calendarUl.style.display == 'none') {
+    calendarTable.style.display = 'none'
+    calendarUl.style.display = 'block'
+  } else {
+    calendarTable.style.display = 'block'
+    calendarUl.style.display = 'none'
+  }
+  if (event.target.innerText == 'calendar_view_day') {
+    event.target.innerHTML = 'date_range'
+  } else {
+    event.target.innerHTML = 'calendar_view_day'
+  }
+}
+
+function applyCalendarStyle(target) {
+  let listCalendarIcon = document.createElement('a')
+  listCalendarIcon.setAttribute('class', 'icon icon-list_calendar material-icons')
+  listCalendarIcon.innerText = 'calendar_view_day'
+  target.appendChild(listCalendarIcon)
+
+  let table = document.querySelector('table.cal')
+
+  // day name (mon, sun, tue....)
+  let dayNameCells = table.querySelectorAll('thead th:not(.week-number)[scope|="col"]')
+
+  // week-number
+  let weekNumbers = table.querySelectorAll('tbody td.week-number')
+  let weekName = weekNumbers[0].getAttribute('title')
+
+  let ul = document.createElement('ul')
+  ul.style = 'list-style: none'
+  ul.setAttribute('class', 'list_cal')
+
+  let cells = table.querySelectorAll('td:not(.week-number)')
+  for (let i = 0; i < cells.length; i++) {
+    let cell = cells[i]
+    let wdayIndex = i % 7
+
+    // Add week number
+    if (wdayIndex == 0) {
+      let weekNumberElement = document.createElement('li')
+      weekNumberElement.setAttribute('class', 'week_number')
+      weekNumberElement.innerHTML = weekNumbers[i / 7].innerHTML + weekName
+      ul.appendChild(weekNumberElement)
+    }
+
+    let li = document.createElement('li')
+    li.innerHTML = '<div class="day_names"><b>' + dayNameCells[i % 7].innerHTML + '</b></div>'
+    li.innerHTML = li.innerHTML + '<div class="issue_days">' + cell.innerHTML + '</div>'
+
+    if (cell.classList.contains('nwday')) {
+      li.classList.add('nwday')
+    }
+    ul.appendChild(li)
+  }
+  let content = document.getElementById('content')
+  table.parentNode.insertBefore(ul, table.nextSibling)
+
+  ul.style = 'display: none;'
+
+  listCalendarIcon.addEventListener('click', toggleCalendar, false)
 }
