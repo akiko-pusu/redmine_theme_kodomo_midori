@@ -171,4 +171,11 @@
     margin: 0 auto;
     width: 100%;
   }
+
+  /*---- calendar tooltip ----*/
+  a.icon.icon-list_calendar.material-icons {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  /*---- calendar tooltip ----*/
 }
