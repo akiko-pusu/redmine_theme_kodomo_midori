@@ -263,6 +263,7 @@ div.tooltip:hover span.tip {
   display: block;
 }
 
+/*-- This style is effective only for Redmine 4.0.x or before. --*/
 div#issue-changesets {
   border-radius: 6px;
   border: 1px solid #a6a5a570;
@@ -282,6 +283,8 @@ div#issue-changesets div.changeset {
 div#issue-changesets>h3 {
   background: linear-gradient(transparent 60%, #ffe5667d 60%);
 }
+
+/*-- This style is effective only for Redmine 4.0.x or before. --*/
 
 body.controller-issues.action-show div#sidebar {
   display: none;

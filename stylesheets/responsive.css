@@ -156,6 +156,7 @@
     left: -100px;
   }
 
+  /*-- This style is effective only for Redmine 4.0.x or before. --*/
   div#issue-changesets {
     padding: 10px;
     max-width: 100%;
@@ -164,6 +165,7 @@
   div#issue-changesets div.changeset {
     display: block;
   }
+  /*-- This style is effective only for Redmine 4.0.x or before. --*/
 
   body.controller-issues.action-show div#content {
     margin: 0 auto;
