@@ -22,6 +22,7 @@ const setCloseRibbon = () => {
   }
 }
 
+// This style is effective only for Redmine 4.0.x or before.
 const displayChangeSets = () => {
   let changeSets = document.querySelectorAll('div#issue-changesets > div.changeset')
   if (changeSets == undefined) {
@@ -39,7 +40,7 @@ const displayChangeSets = () => {
 }
 
 const setIssueStyle = () => {
-  if (document.body.classList.contains('controller-issue') || document.body.classList.contains('action-show')) {
+  if (document.body.classList.contains('controller-issues') || document.body.classList.contains('action-show')) {
     const changeSetheader = document.querySelector('div#issue-changesets > h3')
     if (changeSetheader) {
       changeSetheader.addEventListener('click', displayChangeSets, false)
