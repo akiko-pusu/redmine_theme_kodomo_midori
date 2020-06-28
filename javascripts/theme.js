@@ -6,6 +6,12 @@ const themeInfo = {
   description: 'Redmine theme for kids and children green version.'
 }
 
+// Calendar switch label
+const calendarSwithcVewName = {
+  table: 'date_range',
+  ul: 'calendar_view_day'
+}
+
 // Script to append "Great Job!" message when access the closed issue.
 const setCloseRibbon = () => {
   if (document.body.classList.contains('controller-issues') && document.body.classList.contains('action-show')) {
@@ -225,37 +231,32 @@ async function displayStaffRoll () {
   wrapper.click()
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', setThemeInfo)
-  document.addEventListener('DOMContentLoaded', setCloseRibbon)
-  document.addEventListener('DOMContentLoaded', setLoading)
-  document.addEventListener('DOMContentLoaded', setIssueStyle)
-  document.addEventListener('DOMContentLoaded', projectMembersList)
-  document.addEventListener('DOMContentLoaded', calendarStyleChange)
-}
-
-function toggleCalendar(event) {
+// Switch calender view and icon
+const toggleCalendar = (event) => {
   let calendarUl = document.querySelector('ul.list_cal')
   let calendarTable = document.querySelector('table.cal')
-  console.log('hoge!')
-  if (calendarUl.style.display == 'none') {
+
+  if (event.target.innerText == 'calendar_view_day') {
+    document.cookie = "kodomo_redmine_calender_type=ul"
+    event.target.innerHTML = 'date_range'
     calendarTable.style.display = 'none'
     calendarUl.style.display = 'block'
   } else {
+    document.cookie = "kodomo_redmine_calender_type=table";
+    event.target.innerHTML = 'calendar_view_day'
     calendarTable.style.display = 'block'
     calendarUl.style.display = 'none'
   }
-  if (event.target.innerText == 'calendar_view_day') {
-    event.target.innerHTML = 'date_range'
-  } else {
-    event.target.innerHTML = 'calendar_view_day'
-  }
 }
 
-function applyCalendarStyle(target) {
+// Generate ul calendar and display default view
+const applyCalendarStyle = (target) => {
   let listCalendarIcon = document.createElement('a')
   listCalendarIcon.setAttribute('class', 'icon icon-list_calendar material-icons')
-  listCalendarIcon.innerText = 'calendar_view_day'
+
+  // check cookie
+  let cookie = cookieValue()
+  listCalendarIcon.innerText = calendarSwithcVewName[cookie]
   target.appendChild(listCalendarIcon)
 
   let table = document.querySelector('table.cal')
@@ -291,6 +292,11 @@ function applyCalendarStyle(target) {
     if (cell.classList.contains('nwday')) {
       li.classList.add('nwday')
     }
+
+    if (cell.classList.contains('odd')) {
+      li.classList.add('odd')
+    }
+
     ul.appendChild(li)
   }
   let content = document.getElementById('content')
@@ -299,4 +305,24 @@ function applyCalendarStyle(target) {
   ul.style = 'display: none;'
 
   listCalendarIcon.addEventListener('click', toggleCalendar, false)
+
+  // Change initial view
+  listCalendarIcon.click()
+}
+
+const cookieValue = () => {
+  let value = document.cookie.replace(/(?:(?:^|.*;\s*)kodomo_redmine_calender_type\s*\=\s*([^;]*).*$)|^.*$/, "$1")
+  if (!value) {
+    return 'table'
+  }
+  return value
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', setThemeInfo)
+  document.addEventListener('DOMContentLoaded', setCloseRibbon)
+  document.addEventListener('DOMContentLoaded', setLoading)
+  document.addEventListener('DOMContentLoaded', setIssueStyle)
+  document.addEventListener('DOMContentLoaded', projectMembersList)
+  document.addEventListener('DOMContentLoaded', calendarStyleChange)
 }

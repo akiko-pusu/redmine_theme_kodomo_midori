@@ -1626,8 +1626,21 @@ ul.list_cal li.nwday div.issue_days {
   background-color: #f3f4f3;
 }
 
+ul.list_cal li.odd div.issue_days {
+  opacity: 0.8;
+}
+
+ul.list_cal li.odd div.issue_days {
+  background-color: hsla(68, 31%, 88%, 0.44);
+}
+
 a.icon-list_calendar.material-icons {
   vertical-align: bottom;
   padding-left: 2px;
+}
+
+a.icon-list_calendar.material-icons:active,
+a.icon-list_calendar.material-icons:hover {
+  text-decoration: none;
 }
 /*---- calendar tooltip ----*/
