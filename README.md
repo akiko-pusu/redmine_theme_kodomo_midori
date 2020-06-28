@@ -143,9 +143,12 @@ If the theme alone doesn't cover enough, I'm looking at simple JavaScript tweaks
 **英語**
 
 - Google fonts - [Patrick Hand](https://fonts.google.com/specimen/Patrick+Hand)
- - Designer: Patrick Wagesreiter
- - License: [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
- - https://fonts.google.com/specimen/Patrick+Hand
+  - Designer: Patrick Wagesreiter
+  - License: [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - https://fonts.google.com/specimen/Patrick+Hand
+- [Material Icons](https://material.io/resources/icons/?style=baseline)
+  - Udage: via Google Web fonts
+  - License: [Apache License version2.0](https://www.apache.org/licenses/LICENSE-2.0.html)
 
 **日本語**
 
@@ -157,6 +160,9 @@ If the theme alone doesn't cover enough, I'm looking at simple JavaScript tweaks
   - Designer: MOTOYA
   - License: [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
   - https://fonts.google.com/specimen/Kosugi+Maru
+- [Material Icons](https://material.io/resources/icons/?style=baseline)
+ - Udage: via Google Web fonts
+ - License: [Apache License version2.0](https://www.apache.org/licenses/LICENSE-2.0.html)
 - あんずもじ
   - あんずもじに関しては、各自でのダウンロードと配置をお願いします
   - フォントが組み込まれない場合は、デフォルトの日本語フォントが利用されます
