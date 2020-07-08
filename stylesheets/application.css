@@ -4,6 +4,7 @@
 @import url(./fonts.css);
 @import url(./loading.css);
 @import url(./banner.css);
+@import url(./presentation.css);
 
 body {
   font-family: var(--font-family);
@@ -1609,7 +1610,6 @@ ul.list_cal li div.issue_days {
 
 ul.list_cal li div.issue_days:hover {
   background-color: #ffffdd;
-  ;
 }
 
 ul.list_cal li div.issue_days p.day-num {

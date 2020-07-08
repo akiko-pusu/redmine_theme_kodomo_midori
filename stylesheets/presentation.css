@@ -1,0 +1,198 @@
+/*--- Style for Wiki slide mode ---*/
+section {
+  width: 90%;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  margin: auto;
+  padding-top: 4vh;
+  scroll-snap-align: start;
+}
+
+div.wiki.fullPageScroll {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: white;
+}
+
+nav.pagination {
+  position: fixed;
+  bottom: 20px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+}
+
+nav.pagination a {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #abebcd;
+  transition: transform 0.2s;
+}
+
+nav.pagination a:hover {
+  transform: scale(1.4);
+  background-color: #a8ee87;
+}
+
+nav.pagination a.active {
+  transform: scale(1.4);
+}
+
+nav.pagination a.close {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #fcd47f;
+  transition: transform 0.2s;
+}
+
+nav.pagination a.close:hover {
+  transform: scale(1.4);
+  background-color: #f5a549;
+}
+
+:fullscreen, div.wiki.fullPageScroll {
+  font-size: 4vw;
+  background-color: white;
+}
+
+:fullScreen h1, div.wiki.fullPageScroll h1 {
+  font-size: 7vw;
+  text-align: center;
+  top: 40px;
+  vertical-align: middle;
+  position: relative;
+}
+
+:fullScreen h1:after, div.wiki.fullPageScroll h1:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: rgba(160, 206, 169, 0.45);
+  position: relative;
+  bottom: 4px;
+}
+
+div.wiki.fullPageScroll section:first-of-type {
+  background: white url(../images/logo.png) no-repeat 10px;
+  background-position: 80% 80%;
+  background-size: 150px;
+}
+
+div.wiki.fullPageScroll section > div.titleWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 10vh;
+}
+
+div.wiki.fullPageScroll section:last-of-type {
+  background: white url(../images/logo.png) no-repeat 10px;
+  background-position: 80% 80%;
+  background-size: 150px;
+}
+
+div.wiki.fullPageScroll section:last-child {
+  background-color: tomato;
+}
+
+div.wiki.fullPageScroll section * img {
+  max-height: 70vh;
+}
+
+div.wiki.fullPageScroll div.titleWrapper * {
+  text-align: center !important;
+  padding: 10px;
+}
+
+div.wiki.fullPageScroll ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+div.wiki.fullPageScroll section > ul li{
+  position:relative;
+  padding: 7px 5px 7px 40px;
+  margin: 7px 0 10px 30px;
+  border-bottom:dashed 2px #dfe4ce
+}
+
+div.wiki.fullPageScroll section > ul li:before{
+  content: '.';
+  position: absolute;
+  left: 0px;
+  width: 30px;
+  height: 30px;
+  line-height: 25px;
+  text-align: center;
+  color: #fff;
+  background: #9bd682;
+  border-radius: 50%;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+:fullScreen h2, div.wiki.fullPageScroll h2 {
+  font-size: 5.5vw;
+}
+
+:fullScreen h3, div.wiki.fullPageScroll h3 {
+  font-size: 4vw;
+}
+
+:fullScreen h4, div.wiki.fullPageScroll h4 {
+  font-size: 3.5vw;
+}
+
+a.material-icons.icon-slideshow {
+  border: none !important;
+  vertical-align: bottom;
+  padding-left: 2px !important;
+}
+
+div.wiki.fullPageScroll a.wiki-anchor {
+  display: none;
+}
+
+/* Tooltip text */
+nav.pagination a > span.tooltiptext {
+  visibility: hidden;
+  color: rgb(139, 139, 139);
+  padding: 5px 0;
+  position: absolute;
+  top: -36px;
+  left: -20px;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+nav.pagination a:hover > span.tooltiptext {
+  visibility: visible;
+  transform: none;
+  font-size: 1.2vw;
+  text-align: left;
+  min-width: 120px;
+  max-width: 300px;
+  white-space: nowrap;
+  border-bottom: dashed 1px #7eb991;
+}
