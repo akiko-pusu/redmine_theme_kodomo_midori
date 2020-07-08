@@ -300,8 +300,9 @@ http://localhost:3000/ にアクセスしてください。
 
 - 1.0.1
   - Use Google Material icon font.
-  - Imprement list style calendar view. (Issue: #30)
-  - Add wiki based presentation mode. (Issue: #35)
+  - Implement list style calendar view. (Issue: #30)
+  - Add wiki-based presentation mode. (Issue: #35)
+  - Add message customize file for plain Redmine. (Issue: #28 / Thanks, Go Maeda!)
 - 1.0.0
   - Update the major version to 1.0.0.
   - Apply theme font for ui-widget class. (Isue: #18)
