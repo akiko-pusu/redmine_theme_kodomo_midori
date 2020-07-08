@@ -298,6 +298,10 @@ http://localhost:3000/ にアクセスしてください。
 
 ## ChangeLog
 
+- 1.0.1
+  - Use Google Material icon font.
+  - Imprement list style calendar view. (Issue: #30)
+  - Add wiki based presentation mode. (Issue: #35)
 - 1.0.0
   - Update the major version to 1.0.0.
   - Apply theme font for ui-widget class. (Isue: #18)
