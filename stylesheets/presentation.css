@@ -5,7 +5,7 @@ section {
   position: relative;
   top: 0;
   margin: auto;
-  padding-top: 4vh;
+  padding-top: 2vh;
   scroll-snap-align: start;
 }
 
@@ -23,13 +23,13 @@ div.wiki.fullPageScroll {
 
 nav.pagination {
   position: fixed;
-  bottom: 20px;
+  bottom: 14px;
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
   width: 100%;
   background-color: white;
-  padding: 20px;
+  padding: 14px;
 }
 
 nav.pagination a {
@@ -77,6 +77,8 @@ nav.pagination a.close:hover {
   top: 40px;
   vertical-align: middle;
   position: relative;
+  word-break: keep-all;
+  overflow-wrap : break-word;
 }
 
 :fullScreen h1:after, div.wiki.fullPageScroll h1:after {
@@ -126,14 +128,14 @@ div.wiki.fullPageScroll ul {
   padding-left: 20px;
 }
 
-div.wiki.fullPageScroll section > ul li{
+div.wiki.fullPageScroll section > ul > li {
   position:relative;
   padding: 7px 5px 7px 40px;
   margin: 7px 0 10px 30px;
   border-bottom:dashed 2px #dfe4ce
 }
 
-div.wiki.fullPageScroll section > ul li:before{
+div.wiki.fullPageScroll section > ul > li:before {
   content: '.';
   position: absolute;
   left: 0px;
@@ -144,7 +146,7 @@ div.wiki.fullPageScroll section > ul li:before{
   color: #fff;
   background: #9bd682;
   border-radius: 50%;
-  top: 50%;
+  top: 5vh;
   -moz-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -o-transform: translateY(-50%);
@@ -152,8 +154,13 @@ div.wiki.fullPageScroll section > ul li:before{
   transform: translateY(-50%);
 }
 
+div.wiki.fullPageScroll section > ul > li ul {
+  font-size: smaller;
+}
+
 :fullScreen h2, div.wiki.fullPageScroll h2 {
   font-size: 5.5vw;
+  word-break: keep-all;
 }
 
 :fullScreen h3, div.wiki.fullPageScroll h3 {
